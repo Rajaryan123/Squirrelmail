@@ -1,20 +1,16 @@
 <?php
-
 /**
- * forms.php - html form functions
+ * forms.php
+ *
+ * Copyright (c) 2004 The SquirrelMail Project Team
+ * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
  * Functions to build HTML forms in a safe and consistent manner.
  * All name, value attributes are htmlentitied.
  *
- * @link http://www.section508.gov/ Section 508
- * @link http://www.w3.org/WAI/ Web Accessibility Initiative (WAI)
- * @link http://www.w3.org/TR/html4/ W3.org HTML 4.01 form specs
- * @copyright 2004-2012 The SquirrelMail Project Team
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  * @version $Id$
  * @package squirrelmail
  * @subpackage forms
- * @since 1.4.3 and 1.5.1
  */
 
 /**
@@ -25,23 +21,23 @@ function addInputField($type, $name = null, $value = null, $attributes = '') {
     return '<input type="'.$type.'"'.
         ($name  !== null ? ' name="'.htmlspecialchars($name).'"'   : '').
         ($value !== null ? ' value="'.htmlspecialchars($value).'"' : '').
-        ' ' . $attributes . " />\n";
+        $attributes . " />\n";
 }
 
 /**
  * Password input field
  */
-function addPwField($name , $value = null, $extra_attributes='') {
-    return addInputField('password', $name , $value, $extra_attributes);
+function addPwField($name , $value = null) {
+    return addInputField('password', $name , $value);
 }
 
 
 /**
  * Form checkbox
  */
-function addCheckBox($name, $checked = false, $value = null, $extra_attributes='') {
+function addCheckBox($name, $checked = false, $value = null) {
     return addInputField('checkbox', $name, $value,
-        ($checked ? ' checked="checked"' : '') . $extra_attributes);
+        ($checked ? ' checked="checked"' : ''));
 }
 
 /**
@@ -62,16 +58,17 @@ function addHidden($name, $value) {
 /**
  * An input textbox.
  */
-function addInput($name, $value = '', $size = 0, $maxlength = 0, $extra_attributes='') {
+function addInput($name, $value = '', $size = 0, $maxlength = 0) {
 
+    $attr = '';
     if ($size) {
-        $extra_attributes .= ' size="'.(int)$size.'"';
+        $attr.= ' size="'.(int)$size.'"';
     }
     if ($maxlength) {
-        $extra_attributes .= ' maxlength="'.(int)$maxlength .'"';
+        $attr.= ' maxlength="'.(int)$maxlength .'"';
     }
 
-    return addInputField('text', $name, $value, $extra_attributes);
+    return addInputField('text', $name, $value, $attr);
 }
 
 
@@ -79,7 +76,7 @@ function addInput($name, $value = '', $size = 0, $maxlength = 0, $extra_attribut
  * Function to create a selectlist from an array.
  * Usage:
  * name: html name attribute
- * values: array ( key => value )  ->     <option value="key">value</option>
+ * values: array ( key => value )  ->     <option value="key">value
  * default: the key that will be selected
  * usekeys: use the keys of the array as option value or not
  */
@@ -97,7 +94,7 @@ function addSelect($name, $values, $default = null, $usekeys = false)
         if(!$usekeys) $k = $v;
         $ret .= '<option value="' .
             htmlspecialchars( $k ) . '"' .
-            (($default == $k) ? ' selected="selected"' : '') .
+            (($default == $k) ? ' selected="selected"':'') .
             '>' . htmlspecialchars($v) ."</option>\n";
     }
     $ret .= "</select>\n";
@@ -109,8 +106,8 @@ function addSelect($name, $values, $default = null, $usekeys = false)
  * Form submission button
  * Note the switched value/name parameters!
  */
-function addSubmit($value, $name = null, $extra_attributes='') {
-    return addInputField('submit', $name, $value, $extra_attributes);
+function addSubmit($value, $name = null) {
+    return addInputField('submit', $name, $value);
 }
 /**
  * Form reset button, $value = caption
@@ -124,30 +121,14 @@ function addReset($value) {
  */
 function addTextArea($name, $text = '', $cols = 40, $rows = 10, $attr = '') {
     return '<textarea name="'.htmlspecialchars($name).'" '.
-        'rows="'.(int)$rows .'" cols="'.(int)$cols.'" '.
-        $attr . '>'.htmlspecialchars($text) ."</textarea>\n";
+        'rows="'.(int)$rows .'" cols="'.(int)$cols.'"'.
+        $attr . '">'.htmlspecialchars($text) ."</textarea>\n";
 }
 
 /**
  * Make a <form> start-tag.
- *
- * @param string $action
- * @param string $method
- * @param string $name
- * @param string $enctype
- * @param string $charset
- * @param string $extra     Any other attributes can be added with this parameter;
- *                          they should use double quotes around attribute values
- *                          (OPTIONAL; default empty)
- * @param mixed  $add_token When given as a string or as boolean TRUE, a hidden
- *                          input is also added to the form containing a security
- *                          token.  When given as TRUE, the input name is "smtoken";
- *                          otherwise the name is the string that is given for this
- *                          parameter.  When FALSE, no hidden token input field is
- *                          added.  (OPTIONAL; default not used)
- *
  */
-function addForm($action, $method = 'post', $name = '', $enctype = '', $charset = '', $extra = '', $add_token = FALSE)
+function addForm($action, $method = 'POST', $name = '', $enctype = '', $charset = '')
 {
     if($name) {
         $name = ' name="'.$name.'"';
@@ -159,15 +140,8 @@ function addForm($action, $method = 'post', $name = '', $enctype = '', $charset 
         $charset = ' accept-charset="'.htmlspecialchars($charset).'"';
     }
 
-    $form_string = '<form action="'. $action .'" method="'. $method .'"'.
-        $enctype . $name . $charset . ' ' . $extra . " >\n";
-
-    if($add_token) {
-        $form_string .= '<input type="hidden" value="' . sm_generate_security_token()
-                      . '" name="' . (is_string($add_token) ? $add_token : 'smtoken')
-                      . "\" />\n";
-    }
-
-    return $form_string;
+    return '<form action="'. $action .'" method="'. $method .'"'.
+        $enctype . $name . $charset . ">\n";
 }
 
+?>
