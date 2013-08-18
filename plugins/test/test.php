@@ -3,7 +3,7 @@
  * Lists available tests
  * @copyright 2006-2009 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: test.php 13850 2009-09-29 12:15:33Z jervfors $
  * @package plugins
  * @subpackage test
  */

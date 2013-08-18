@@ -23,7 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * Foowd/smdoc environment
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: env.foowd.php 7700 2004-06-29 05:40:55Z ebullient $
  *
  * @package Foowd
  */

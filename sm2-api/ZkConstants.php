@@ -5,7 +5,7 @@
  * Copyright (c) 2001-2002 The Zookeeper Project Team
  * Licensed under the GNU GPL. For full terms see the file COPfYING.
  *
- * $Id$
+ * $Id: ZkConstants.php 2753 2002-04-20 00:17:39Z thomppj $
  */
 
 /**

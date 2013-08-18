@@ -6,9 +6,9 @@
  * Provides some functions for use in left_main.php and templates.  Do not echo
  * output from these functions!
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: folder_list_util.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage templates
  */

@@ -7,9 +7,9 @@
  *         featuring a dark background with light text.
  *
  * @author Jorey Bump
- * @copyright 2000-2012 The SquirrelMail Project Team
+ * @copyright 2000-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: spice_of_life_dark.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage themes
  */

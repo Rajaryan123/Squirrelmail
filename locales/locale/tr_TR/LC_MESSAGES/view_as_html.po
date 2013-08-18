@@ -1,7 +1,7 @@
 # Turkish (tr_TR) view_as_html plugin translation.
-# Copyright (c) 2002-2012 The SquirrelMail Project Team
+# Copyright (c) 2002-2013 The SquirrelMail Project Team
 # Kerem Erkan <akerem@hacettepe.edu.tr>, 2002.
-# $Id$
+# $Id: view_as_html.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: view_as_html\n"

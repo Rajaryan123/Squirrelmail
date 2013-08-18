@@ -5,9 +5,9 @@
  * This file contains gb18030 decoding function that is needed to read
  * gb18030 encoded mails in non-gb18030 locale.
  *
- * @copyright (c) 2005-2012 The SquirrelMail Project Team
+ * @copyright (c) 2005-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: gb18030.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package decode
  * @subpackage eastasia
  */

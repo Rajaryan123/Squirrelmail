@@ -6,9 +6,9 @@
  * scripts which do most of the work. Also handles the Special
  * Folders.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: folders.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -43,7 +43,7 @@ if ( sqgetGlobalVar('smaction', $action, SQ_POST) ) {
         case 'create':
 
             // first, validate security token
-            sm_validate_security_token($submitted_token, 3600, TRUE);
+            sm_validate_security_token($submitted_token, -1, TRUE);
 
             sqgetGlobalVar('folder_name',  $folder_name,  SQ_POST);
             sqgetGlobalVar('subfolder',    $subfolder,    SQ_POST);
@@ -61,7 +61,7 @@ if ( sqgetGlobalVar('smaction', $action, SQ_POST) ) {
             } else {
 
                 // first, validate security token
-                sm_validate_security_token($submitted_token, 3600, TRUE);
+                sm_validate_security_token($submitted_token, -1, TRUE);
 
                 sqgetGlobalVar('orig',        $orig,     SQ_POST);
                 sqgetGlobalVar('old_name',    $old_name, SQ_POST);
@@ -77,7 +77,7 @@ if ( sqgetGlobalVar('smaction', $action, SQ_POST) ) {
             if ( sqgetGlobalVar('confirmed', $dummy, SQ_POST) ) {
 
                 // first, validate security token
-                sm_validate_security_token($submitted_token, 3600, TRUE);
+                sm_validate_security_token($submitted_token, -1, TRUE);
 
                 folders_delete_do($imapConnection, $delimiter, $folder_name);
                 $td_str =  _("Deleted folder successfully.");
@@ -88,7 +88,7 @@ if ( sqgetGlobalVar('smaction', $action, SQ_POST) ) {
         case 'subscribe':
 
             // first, validate security token
-            sm_validate_security_token($submitted_token, 3600, TRUE);
+            sm_validate_security_token($submitted_token, -1, TRUE);
 
             sqgetGlobalVar('folder_names',  $folder_names,  SQ_POST);
             folders_subscribe($imapConnection, $folder_names);
@@ -97,7 +97,7 @@ if ( sqgetGlobalVar('smaction', $action, SQ_POST) ) {
         case 'unsubscribe':
 
             // first, validate security token
-            sm_validate_security_token($submitted_token, 3600, TRUE);
+            sm_validate_security_token($submitted_token, -1, TRUE);
 
             sqgetGlobalVar('folder_names',  $folder_names,  SQ_POST);
             folders_unsubscribe($imapConnection, $folder_names);
@@ -112,7 +112,7 @@ if ( sqgetGlobalVar('smaction', $action, SQ_POST) ) {
 }
 
 if (isset($td_str)) {
-    $oTemplate->assign('note', htmlspecialchars($td_str));
+    $oTemplate->assign('note', sm_encode_html_special_chars($td_str));
     $oTemplate->display('note.tpl');
 }
 
@@ -197,8 +197,8 @@ if ($show_only_subscribed_folders && !$no_list_for_subscribe) {
     	}
     
     	if ($use_folder) {
-    	    $box_enc  = htmlspecialchars($box_a['unformatted-dm']);
-    	    $box_disp = htmlspecialchars(imap_utf7_decode_local($box_a['unformatted-disp']));
+    	    $box_enc  = sm_encode_html_special_chars($box_a['unformatted-dm']);
+    	    $box_disp = sm_encode_html_special_chars(imap_utf7_decode_local($box_a['unformatted-disp']));
             $subbox_option_list[] = array( 'Value' => $box_enc, 'Display' => $box_disp);
     	}
     }

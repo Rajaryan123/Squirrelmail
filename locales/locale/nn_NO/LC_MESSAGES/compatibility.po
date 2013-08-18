@@ -1,8 +1,8 @@
 # translation of compatibility.po to Nynorsk
 # This file is distributed under the same license as the compatibility plugin.
-# Copyright (c) 2004-2012 The SquirrelMail Project Team
+# Copyright (c) 2004-2013 The SquirrelMail Project Team
 # Ola Ketil Siqveland <olaketil@hotmail.com>, 2004-2006
-# $Id$
+# $Id: compatibility.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: compatibility 2.0.4\n"

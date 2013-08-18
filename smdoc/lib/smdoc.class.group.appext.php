@@ -11,7 +11,7 @@
  * Defines small class for storing additional groups
  * in a single DB record.
  * 
- * $Id$
+ * $Id: smdoc.class.group.appext.php 7340 2004-05-01 19:55:48Z ebullient $
  * @package smdoc
  * @subpackage group
  */

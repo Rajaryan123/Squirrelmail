@@ -1,11 +1,11 @@
 # Czech (cs_CZ) SquirrelMail Translation
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Lucie Fischerová <lucka@globe.cz>, 2000.
 # Tomáš Zvala <tomas@zvala.cz>, 2003.
 # Daniel Kahoun <squirrel@dan.idk.cz>, 2006.
 # Tomáš Drbohlav <tomas.drbohlav@mff.cuni.cz>, 2005-2008.
-# $Id$
+# $Id: squirrelmail.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: SquirrelMail HEAD\n"

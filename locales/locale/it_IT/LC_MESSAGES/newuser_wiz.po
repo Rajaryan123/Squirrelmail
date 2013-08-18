@@ -1,8 +1,8 @@
 # Italian (it_IT) newuser_wiz Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Rocco Scappatura <rocsca@sttspa.it>, 2006.
-# $Id$
+# $Id: newuser_wiz.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: newuser_wiz 1.3.2\n"

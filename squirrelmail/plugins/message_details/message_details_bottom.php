@@ -7,9 +7,9 @@
  *
  * @author Marc Groot Koerkamp
  * @copyright 2002 Marc Groot Koerkamp, The Netherlands
- * @copyright 2002-2012 The SquirrelMail Project Team
+ * @copyright 2002-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: message_details_bottom.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage message_details
  */
@@ -130,7 +130,7 @@ function get_message_details($mailbox, $passed_id, $passed_ent_id=0, $stripHTML=
     $messageheaderstart=false;
     $boundaries = array();
     $entities = array();
-    session_unregister("entities");
+    sqsession_unregister("entities");
     $pre = '<b>';
     $end = '</b>';
     $entStr = '';
@@ -260,7 +260,7 @@ function get_message_details($mailbox, $passed_id, $passed_ent_id=0, $stripHTML=
                             $entities["$entStr"]['contenttype']=$reg[2].'/'.$reg[3];
                         }
                     } else if (!$nameset && preg_match("/^.*(name=\s*)\"(.*)\".*/i",$line,$reg)) {
-                        $name = htmlspecialchars($reg[2]);
+                        $name = sm_encode_html_special_chars($reg[2]);
                         $content[$content_indx]['name'] = decodeHeader($name);
                         $nameset = true;
                         if (isset($entities["$entStr"])) {
@@ -285,7 +285,7 @@ function get_message_details($mailbox, $passed_id, $passed_ent_id=0, $stripHTML=
         if ($stripHTML) {
             $message_body .= $line . "\r\n";
         } else {
-            $line = htmlspecialchars($line);
+            $line = sm_encode_html_special_chars($line);
             if ($msgd_8bit_in_hex) $line = msgd_convert_to_hex($line);
             $message_body .= "$pre"."$line"."$end"."\r\n";
         }

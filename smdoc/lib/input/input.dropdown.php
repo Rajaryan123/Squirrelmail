@@ -10,7 +10,7 @@
 /**
  * Manage input via a dropdown list.
  *
- * $Id$
+ * $Id: input.dropdown.php 8557 2005-01-02 07:41:14Z ebullient $
  *
  * @package smdoc
  * @subpackage input

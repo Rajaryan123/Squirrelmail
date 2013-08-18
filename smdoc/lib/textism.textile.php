@@ -6,7 +6,7 @@
  *  + references to magic_gpc checks were commented out
  *    because the input library already handles stripslashes
  *
- * $Id$
+ * $Id: textism.textile.php 7702 2004-06-29 06:12:13Z ebullient $
  *
  * @see http://www.textism.com/article/739/
  * @see http://www.textism.com/tools/textile/beta2.html

@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Philippe Mingo
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: php_imap.php 1587 2001-10-20 12:34:46Z philippe_mingo $
  */
 
 /**
@@ -14,7 +14,7 @@
  */
 class ZkMod_auth_php_imap {
 
-    var $ver = '$Id$';
+    var $ver = '$Id: php_imap.php 1587 2001-10-20 12:34:46Z philippe_mingo $';
     var $name = 'auth/php_imap';
 
     var $srv;	// backward pointer to the service

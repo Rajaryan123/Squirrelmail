@@ -8,9 +8,9 @@
  *
  * @link http://www.php.net/gettext Original php gettext manual
  * @link http://savannah.nongnu.org/projects/php-gettext php-gettext classes
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: gettext.php 14387 2013-07-26 17:31:02Z jervfors $
  * @since 1.1.2
  * @package squirrelmail
  * @subpackage i18n

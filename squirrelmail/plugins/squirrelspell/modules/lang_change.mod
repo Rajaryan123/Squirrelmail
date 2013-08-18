@@ -9,15 +9,15 @@
  * for the user. Called after LANG_SETUP module.
  *
  * @author Konstantin Riabitsev <icon at duke.edu>
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: lang_change.mod 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage squirrelspell
  */
 
 sqgetGlobalVar('smtoken', $submitted_token, SQ_POST, '');
-sm_validate_security_token($submitted_token, 3600, TRUE);
+sm_validate_security_token($submitted_token, -1, TRUE);
 
 global $SQSPELL_APP_DEFAULT;
 
@@ -42,7 +42,7 @@ foreach ($use_langs as $lang) {
 if (sizeof($new_langs)>1) {
   $dsp_string = '';
   foreach( $new_langs as $a) {
-    $dsp_string .= _(htmlspecialchars(trim($a))) . _(", ");
+    $dsp_string .= _(sm_encode_html_special_chars(trim($a))) . _(", ");
   }
   // remove last comma and space
   $dsp_string = substr( $dsp_string, 0, -2 );
@@ -52,15 +52,15 @@ if (sizeof($new_langs)>1) {
   // make sure that you don't use html codes in language name translations
   $msg = '<p>'
     . sprintf(_("Settings adjusted to: %s with %s as default dictionary."),
-             '<strong>'.htmlspecialchars($dsp_string).'</strong>',
-             '<strong>'.htmlspecialchars(_($lang_default)).'</strong>')
+             '<strong>'.sm_encode_html_special_chars($dsp_string).'</strong>',
+             '<strong>'.sm_encode_html_special_chars(_($lang_default)).'</strong>')
     . '</p>';
 } else {
   /**
    * Only one dictionary is selected.
    */
   $msg = '<p>'
-    . sprintf(_("Using %s dictionary for spellcheck." ), '<strong>'.htmlspecialchars(_($new_langs[0])).'</strong>')
+    . sprintf(_("Using %s dictionary for spellcheck." ), '<strong>'.sm_encode_html_special_chars(_($new_langs[0])).'</strong>')
     . '</p>';
 }
 

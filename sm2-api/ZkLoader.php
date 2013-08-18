@@ -5,7 +5,7 @@
  * Copyright (c) 2001-2002 The Zookeeper Project Team
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: ZkLoader.php 3509 2002-08-29 20:01:33Z thomppj $
  */
 
 /**

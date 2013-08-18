@@ -11,7 +11,7 @@
  * Template for Textile document creation
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: smdoc_news.object_edit.tpl 8335 2004-11-06 04:38:50Z ebullient $
  *
  * @package smdoc
  * @subpackage template

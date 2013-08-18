@@ -1,8 +1,8 @@
 # Bahasa Indonesia (id_ID) select_language Translation (SquirrelMail plugin)
-# Copyright (c) 2006-2012 The SquirrelMail Project Team
+# Copyright (c) 2006-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>, 2006.
-# $Id$
+# $Id: select_language.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: select_language 1.1\n"

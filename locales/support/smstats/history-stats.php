@@ -2,7 +2,7 @@
 <?php
 
 ////////////////////////////////////////////////////////////////////////////
-// $Id$
+// $Id: history-stats.php 8819 2005-02-08 11:35:07Z tokul $
 //
 // Description: GUI messages history statistics rendering
 //

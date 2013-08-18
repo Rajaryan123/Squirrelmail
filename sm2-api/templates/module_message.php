@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Paul Joseph Thompson
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: module_message.php 1571 2001-10-17 04:29:00Z thomppj $
  */
  
  /**

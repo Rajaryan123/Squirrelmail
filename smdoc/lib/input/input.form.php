@@ -12,7 +12,7 @@
  * that also manages form attributes (get/post, action, 
  * submit/reset/preview button names, etc.).
  *
- * $Id$
+ * $Id: input.form.php 8557 2005-01-02 07:41:14Z ebullient $
  * @package smdoc
  * @subpackage input
  */

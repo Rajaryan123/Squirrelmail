@@ -10,9 +10,9 @@
  *      $download_href          - URL to download the attachment as a file
  *      $body                   - Body of the attachment to be displayed
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: view_text.tpl 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage templates
  */

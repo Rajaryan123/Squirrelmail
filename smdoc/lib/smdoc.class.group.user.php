@@ -13,7 +13,7 @@ setPermission('smdoc_group_user','class','edit','Gods');
 /** 
  * Singleton Group Manager.
  * 
- * $Id$
+ * $Id: smdoc.class.group.user.php 8557 2005-01-02 07:41:14Z ebullient $
  * @package smdoc
  * @subpackage group
  */

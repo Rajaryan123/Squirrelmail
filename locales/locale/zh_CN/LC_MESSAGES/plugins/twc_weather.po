@@ -1,7 +1,7 @@
 # TWC WEATHER v1.3
 # Copyright (C) 2004 Jamuel P. STARKEY
 # JAMUEL P. STARKEY <JAMUEL@MY740IL.COM>, 2004.
-# $Id$
+# $Id: twc_weather.po 9907 2005-08-06 03:21:50Z tokul $
 msgid ""
 msgstr ""
 "Project-Id-Version: TWC_WEATHER v1.3 BETA 3\n"

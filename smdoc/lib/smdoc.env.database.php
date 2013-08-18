@@ -6,13 +6,13 @@
  * This file is an addition/modification to the
  * Framework for Object Orientated Web Development (Foowd).
  *
- * $Id$
+ * $Id: smdoc.env.database.php 7892 2004-08-12 03:53:36Z ebullient $
  */
 
 /** 
  * Modified Database implementation that uses PEAR DB.
  * 
- * $Id$
+ * $Id: smdoc.env.database.php 7892 2004-08-12 03:53:36Z ebullient $
  * 
  * @package smdoc
  * @subpackage db

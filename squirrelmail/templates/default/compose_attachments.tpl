@@ -9,9 +9,9 @@
  *    $accesskey_compose_attach        - The access key to be used for the Attach button
  *    $accesskey_compose_delete_attach - The access key to be used for the Delete Attachments button
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: compose_attachments.tpl 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage templates
  */
@@ -22,7 +22,7 @@ extract($t);
 /** Begin template **/
 ?>
 <div class="compose">
-<table cellspacing="0" class="table1">
+<table cellspacing="0" class="table1" id="attachment_table">
  <tr class="header">
   <td class="fieldName" style="width: 1%; white-space: nowrap;">
    <?php echo _("New attachment");?>:
@@ -41,20 +41,22 @@ extract($t);
     if($max_file_size != -1) {
        echo '(' . _("Max.") . ' ' . humanReadableSize($max_file_size) . ')';
     }
+    if (!empty($plugin_output['add_attachment_notes'])) echo $plugin_output['add_attachment_notes'];
    ?>
   </td>
  </tr>
  <?php
+    if (!empty($plugin_output['attachment_inputs'])) echo $plugin_output['attachment_inputs'];
     $attachment_count = 1;
     foreach ($attachments as $attach) {
         ?>
  <tr class="attachment">
   <td class="fieldName" style="width: 1%">
-   <input type="checkbox" name="delete[]" accesskey="<?php echo ($attachment_count % 10); ?>" value="<?php echo $attach['Key']; ?>" />
+   <input type="checkbox" name="delete[]" id="delete<?php echo $attachment_count; ?>" accesskey="<?php echo ($attachment_count % 10); ?>" value="<?php echo $attach['Key']; ?>" />
   </td>
-  <td class="fieldValue">
+  <td class="fieldValue"><label for="delete<?php echo $attachment_count; ?>">
    <?php echo $attach['FileName']; ?> - <?php echo $attach['ContentType']; ?> (<?php echo humanReadableSize($attach['Size']); ?>)
-  </td>
+  </label></td>
  </tr>
         <?php
         $attachment_count++;

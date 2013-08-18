@@ -1,7 +1,7 @@
 # Portuguese askuserinfo plugin translation.
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
 # Ruben Leote Mendes <ruben@nocturno.org>, 2003.
-# $Id$
+# $Id: askuserinfo.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: askuserinfo VERSION\n"

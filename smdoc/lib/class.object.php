@@ -26,7 +26,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * base FOOWD object functionality.
  * 
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: class.object.php 9186 2005-04-03 21:48:01Z ebullient $
  * 
  * @package smdoc
  * @subpackage Foowd

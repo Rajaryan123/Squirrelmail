@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Paul Joseph Thompson
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: module_auth.php 1490 2001-09-07 02:40:48Z thomppj $
  */
 
 /**

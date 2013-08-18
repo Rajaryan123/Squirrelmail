@@ -5,9 +5,9 @@
  *
  * This is the code to view the message header.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: view_header.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -39,7 +39,7 @@ function parse_viewheader($imapConnection,$id, $passed_ent_id) {
     }
     $cnum = 0;
     for ($i=1; $i < count($read); $i++) {
-        $line = htmlspecialchars($read[$i]);
+        $line = sm_encode_html_special_chars($read[$i]);
         switch (true) {
             case (preg_match('/^&gt;/i', $line)):
                 $second[$i] = $line;

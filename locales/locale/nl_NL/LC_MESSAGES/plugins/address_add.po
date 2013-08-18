@@ -3,8 +3,8 @@
 # Rinse de Vries <rinsedevries@kde.nl>, 2007.
 # SquirrelMail Address Add plugin
 # Dutch translation
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
-# $Id$
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
+# $Id: address_add.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: address_add\n"

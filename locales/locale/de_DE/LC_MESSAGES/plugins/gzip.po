@@ -1,10 +1,10 @@
 # SquirrelMail gzip plugin
 # German translation
-# Copyright (c) 2004-2012 The SquirrelMail Project Team
+# Copyright (c) 2004-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the plugin's package.
 # Ferdie Ferdsen <ferdie@despam.de>, 2004.
 # Ralf Hildebrandt <Ralf.Hildebrandt@charite.de>, 2005.
-# $Id$
+# $Id: gzip.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: gzip\n"

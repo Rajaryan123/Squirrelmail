@@ -6,7 +6,7 @@
  * This file is an addition/modification to the
  * Framework for Object Orientated Web Development (Foowd).
  *
- * $Id$
+ * $Id: config.default.php 9185 2005-04-03 21:42:05Z ebullient $
  */
 
 /**

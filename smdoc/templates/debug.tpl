@@ -11,7 +11,7 @@
  * Template for debug display
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: debug.tpl 8326 2004-11-05 09:47:03Z ebullient $
  * 
  * @package smdoc
  * @subpackage template

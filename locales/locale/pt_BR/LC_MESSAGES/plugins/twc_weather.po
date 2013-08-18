@@ -1,6 +1,6 @@
 # translation of twc_weather to Portugues Brasileiro
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
-# $Id$
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
+# $Id: twc_weather.po 14387 2013-07-26 17:31:02Z jervfors $
 # Sergio Pacca <spacca@socrates.Berkeley.EDU>, 2003
 # Marcos Tadeu <marcos@v2r.com.br>, 2005
 #

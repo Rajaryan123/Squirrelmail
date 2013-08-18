@@ -12,7 +12,7 @@
  * nested inside this template.
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: index.tpl 8406 2004-11-29 20:56:25Z ebullient $
  * 
  * @package smdoc
  * @subpackage template

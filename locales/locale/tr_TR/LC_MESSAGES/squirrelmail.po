@@ -1,8 +1,8 @@
 # Turkish (tr_TR) SquirrelMail Translation
-# Copyright (c) 2004-2012 The SquirrelMail Project Team
+# Copyright (c) 2004-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Kerem Erkan <kerem@keremerkan.net>, 2004-2007
-# $Id$
+# $Id: squirrelmail.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: squirrelmail HEAD\n"

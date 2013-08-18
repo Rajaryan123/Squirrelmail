@@ -6,9 +6,9 @@
  * takes a string of unicode entities and converts it to a iso-8859-2 encoded string
  * Unsupported characters are replaced with ?.
  *
- * @copyright 2004-2012 The SquirrelMail Project Team
+ * @copyright 2004-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: iso_8859_2.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage encode
  */
@@ -22,8 +22,7 @@ function charset_encode_iso_8859_2 ($string) {
    // don't run encoding function, if there is no encoded characters
    if (! preg_match("'&#[0-9]+;'",$string) ) return $string;
 
-    $string=preg_replace("/&#([0-9]+);/e","unicodetoiso88592('\\1')",$string);
-    // $string=preg_replace("/&#[xX]([0-9A-F]+);/e","unicodetoiso88592(hexdec('\\1'))",$string);
+    $string=preg_replace_callback("/&#([0-9]+);/",'unicodetoiso88592',$string);
 
     return $string;
 }
@@ -36,10 +35,11 @@ function charset_encode_iso_8859_2 ($string) {
  * Don't use it or make sure, that functions/encode/iso_8859_2.php is
  * included.
  *
- * @param int $var decimal unicode value
+ * @param array $matches array with first element a decimal unicode value
  * @return string iso-8859-2 character
  */
-function unicodetoiso88592($var) {
+function unicodetoiso88592($matches) {
+    $var = $matches[1];
 
     $iso88592chars=array('160' => "\xA0",
                         '164' => "\xA4",

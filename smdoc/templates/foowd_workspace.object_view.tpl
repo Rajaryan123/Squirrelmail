@@ -11,7 +11,7 @@
  * Template for workspace view
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: foowd_workspace.object_view.tpl 7888 2004-08-12 01:51:36Z ebullient $
  * 
  * @package smdoc
  * @subpackage template

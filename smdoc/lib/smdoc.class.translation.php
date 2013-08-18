@@ -10,7 +10,7 @@
 /**
  * Implementation of Site Translations based on Workspaces
  *
- * $Id$
+ * $Id: smdoc.class.translation.php 8334 2004-11-06 02:08:16Z ebullient $
  * @see foowd_workspace
  * @package smdoc
  */

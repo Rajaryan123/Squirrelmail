@@ -8,9 +8,9 @@
  * Subfolder search idea from Patch #806075 by Thomas Pohl xraven at users.sourceforge.net. Thanks Thomas!
  *
  * @author Alex Lemaresquier - Brainstorm <alex at brainstorm.fr>
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: imap_asearch.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage imap
  * @see search.php

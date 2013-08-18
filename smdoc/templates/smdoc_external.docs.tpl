@@ -11,7 +11,7 @@
  * Template for viewing generated documentation for smdoc Framework
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: smdoc_external.docs.tpl 8732 2005-01-28 17:26:01Z ebullient $
  *
  * @package smdoc
  * @subpackage template

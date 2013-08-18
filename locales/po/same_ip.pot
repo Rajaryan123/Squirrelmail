@@ -1,8 +1,8 @@
 # LANGUAGE (xx_XX) same_ip Translation (SquirrelMail plugin)
-# Copyright (c) 2007-2012 The SquirrelMail Project Team
+# Copyright (c) 2007-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# $Id: same_ip.pot 12740 2007-10-24 21:31:21Z jervfors $
+# $Id: same_ip.pot 14387 2013-07-26 17:31:02Z jervfors $
 #, fuzzy
 msgid ""
 msgstr ""

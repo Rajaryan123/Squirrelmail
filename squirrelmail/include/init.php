@@ -5,9 +5,9 @@
  *
  * File should be loaded in every file in src/ or plugins that occupate an entire frame
  *
- * @copyright 2006-2012 The SquirrelMail Project Team
+ * @copyright 2006-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: init.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -223,15 +223,17 @@ if (file_exists(SM_PATH . 'config/config_local.php')) {
 
 /**
  * Set PHP error reporting level based on the SquirrelMail debug mode
+ * E_STRICT = 2048
+ * E_DEPRECATED = 8192
  */
 $error_level = 0;
 if ($sm_debug_mode & SM_DEBUG_MODE_SIMPLE)
     $error_level |= E_ERROR;
 if ($sm_debug_mode & SM_DEBUG_MODE_MODERATE
  || $sm_debug_mode & SM_DEBUG_MODE_ADVANCED)
-    $error_level |= E_ALL;
+    $error_level = ($error_level | E_ALL) & ~2048 & ~8192;
 if ($sm_debug_mode & SM_DEBUG_MODE_STRICT)
-    $error_level |= E_STRICT;
+    $error_level |= 2048 | 8192;
 error_reporting($error_level);
 
 
@@ -272,20 +274,20 @@ if (function_exists('get_magic_quotes_gpc') && @get_magic_quotes_gpc()) {
  * or
  * contrib/decrypt_headers.php/%22%20onmouseover=%22alert(%27hello%20world%27)%22%3E
  * because it doesn't bother with broken tags.
- * htmlspecialchars() is the preferred method.
+ * sm_encode_html_special_chars() is the preferred method.
  * QUERY_STRING also needs the same treatment since it is
  * used in php_self().
  * Update again: the encoding of ampersands that occurs
- * using htmlspecialchars() corrupts the query strings
+ * using sm_encode_html_special_chars() corrupts the query strings
  * in normal URIs, so we have to let those through.
 FIXME: will the de-sanitizing of ampersands create any security/XSS problems?
  */
 if (isset($_SERVER['REQUEST_URI']))
-    $_SERVER['REQUEST_URI'] = str_replace('&amp;', '&', htmlspecialchars($_SERVER['REQUEST_URI']));
+    $_SERVER['REQUEST_URI'] = str_replace('&amp;', '&', sm_encode_html_special_chars($_SERVER['REQUEST_URI']));
 if (isset($_SERVER['PHP_SELF']))
-    $_SERVER['PHP_SELF'] = str_replace('&amp;', '&', htmlspecialchars($_SERVER['PHP_SELF']));
+    $_SERVER['PHP_SELF'] = str_replace('&amp;', '&', sm_encode_html_special_chars($_SERVER['PHP_SELF']));
 if (isset($_SERVER['QUERY_STRING']))
-    $_SERVER['QUERY_STRING'] = str_replace('&amp;', '&', htmlspecialchars($_SERVER['QUERY_STRING']));
+    $_SERVER['QUERY_STRING'] = str_replace('&amp;', '&', sm_encode_html_special_chars($_SERVER['QUERY_STRING']));
 
 $PHP_SELF = php_self();
 

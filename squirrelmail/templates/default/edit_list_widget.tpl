@@ -22,9 +22,9 @@
   *                             for use constructing layouts alternative to
   *                             the select widget
   *
-  * @copyright 1999-2012 The SquirrelMail Project Team
+  * @copyright 1999-2013 The SquirrelMail Project Team
   * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-  * @version $Id: select.tpl 12961 2008-02-24 22:35:08Z pdontthink $
+  * @version $Id: edit_list_widget.tpl 14387 2013-07-26 17:31:02Z jervfors $
   * @package squirrelmail
   * @subpackage templates
   */

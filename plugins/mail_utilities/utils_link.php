@@ -6,7 +6,7 @@
    **  Licensed under the GNU GPL. For full terms see the file COPYING.
    **
    ** See the README file for details.
-   **  $Id$
+   **  $Id: utils_link.php 4982 2003-06-09 04:54:20Z ebullient $
    **/
 
 define('SM_PATH','../../');

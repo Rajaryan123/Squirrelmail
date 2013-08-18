@@ -11,7 +11,7 @@
  * Template for object delete
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: foowd_object.object_delete.tpl 7888 2004-08-12 01:51:36Z ebullient $
  * 
  * @package smdoc
  * @subpackage template

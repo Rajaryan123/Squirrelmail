@@ -3,9 +3,9 @@
 /**
  * Functions to delete a event.
  *
- * @copyright 2002-2012 The SquirrelMail Project Team
+ * @copyright 2002-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: event_delete.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage calendar
  */
@@ -74,11 +74,11 @@ function confirm_deletion() {
                ) .
                html_tag( 'tr',
                    html_tag( 'td', _("Title:"), 'right', $color[4] ) .
-                   html_tag( 'td', htmlspecialchars($tmparray['title']), 'left', $color[4] )
+                   html_tag( 'td', sm_encode_html_special_chars($tmparray['title']), 'left', $color[4] )
                ) .
                html_tag( 'tr',
                    html_tag( 'td', _("Message:"), 'right', $color[4] ) .
-                   html_tag( 'td', nl2br(htmlspecialchars($tmparray['message'])), 'left', $color[4] )
+                   html_tag( 'td', nl2br(sm_encode_html_special_chars($tmparray['message'])), 'left', $color[4] )
                ) .
                html_tag( 'tr',
                    html_tag( 'td',

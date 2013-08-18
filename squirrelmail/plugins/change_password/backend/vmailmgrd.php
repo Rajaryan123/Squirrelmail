@@ -22,9 +22,9 @@
  * v.1.5.1 and v.1.4.4.
  *
  * @author Tomas Kuliavas <tokul at users.sourceforge.net>
- * @copyright 2005-2012 The SquirrelMail Project Team
+ * @copyright 2005-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: vmailmgrd.php 14387 2013-07-26 17:31:02Z jervfors $
  * @link http://www.vmailmgr.org vmailmgr site
  * @package plugins
  * @subpackage change_password

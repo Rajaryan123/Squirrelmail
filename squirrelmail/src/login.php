@@ -6,9 +6,9 @@
  * This a simple login screen. Some housekeeping is done to clean
  * cookies and find language.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: login.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -63,7 +63,7 @@ $username_form_name = 'login_username';
 $password_form_name = 'secretkey';
 do_hook('login_cookie', $null);
 
-$loginname_value = (sqGetGlobalVar('loginname', $loginname) ? htmlspecialchars($loginname) : '');
+$loginname_value = (sqGetGlobalVar('loginname', $loginname) ? sm_encode_html_special_chars($loginname) : '');
 
 //FIXME: should be part of the template, not the core!
 /* Output the javascript onload function. */

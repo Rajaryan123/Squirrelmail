@@ -12,7 +12,7 @@
  * documentation for smdoc framework. 
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: sqmdocs.php 9183 2005-04-03 21:08:59Z ebullient $
  * 
  * @package smdoc
  */

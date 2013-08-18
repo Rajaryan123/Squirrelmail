@@ -7,9 +7,9 @@
  *
  * @author Marc Groot Koerkamp
  * @copyright 2002 Marc Groot Koerkamp, The Netherlands
- * @copyright 2002-2012 The SquirrelMail Project Team
+ * @copyright 2002-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: message_details_top.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage message_details
  */

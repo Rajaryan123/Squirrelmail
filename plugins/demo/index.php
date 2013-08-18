@@ -9,7 +9,7 @@
  * people to the login screen. At this point no attempt is made to see if
  * the person is logged or not.
  *
- * @version $Id$
+ * @version $Id: index.php 11660 2006-08-31 06:14:37Z tokul $
  * @package plugins
  * @subpackage demo
  */

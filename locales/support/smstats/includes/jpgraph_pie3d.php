@@ -4,7 +4,7 @@
 // Description: 3D Pie plot extension for JpGraph
 // Created: 	2001-03-24
 // Author:	Johan Persson (johanp@aditus.nu)
-// Ver:		$Id$
+// Ver:		$Id: jpgraph_pie3d.php 8819 2005-02-08 11:35:07Z tokul $
 //
 // License:	This code is released under QPL
 // Copyright (C) 2001,2002 Johan Persson

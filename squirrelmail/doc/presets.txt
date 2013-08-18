@@ -1,4 +1,4 @@
-$Date$
+$Date: 2010-02-14 00:11:28 +0100 (dom 14 de feb de 2010) $
 
 This file lists the SquirrelMail settings set by option D in conf.pl
 

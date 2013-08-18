@@ -1,8 +1,8 @@
 # Greek (el_GR) show_user_and_ip Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Apostolos Katsinikas <apostolos@costeas-geitonas.gr>, 2005.
-# $Id$
+# $Id: show_user_and_ip.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: show_user_and_ip\n"

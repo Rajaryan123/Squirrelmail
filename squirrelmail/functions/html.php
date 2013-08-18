@@ -7,9 +7,9 @@
  * the right to left implementation by "functionize" some
  * html outputs.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: html.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @since 1.3.0
  */
@@ -390,7 +390,7 @@ function set_url_var($url, $var, $val=null, $link=true, $treat_as_array=false) {
             $p = explode('=', $p);
             $newpar[$p[0]] = (isset($p[1]) ? $p[1] : '');
             if ($treat_as_array && preg_match('/(.*)\[(\d+)]$/', $p[0], $matches)) {
-               if (!is_array($array_names[$matches[1]])) $array_names[$matches[1]] = array();
+               if (!isset($array_names[$matches[1]])) $array_names[$matches[1]] = array();
                $array_names[$matches[1]][$matches[2]] = $p[1];
             }
         }

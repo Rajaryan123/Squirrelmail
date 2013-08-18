@@ -1,9 +1,9 @@
 # Slovak (sk_SK) SquirrelMail Translation
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Peter Kubicko <Booster13@centrum.cz>, 2000-2001.
 # Ivan Masár <helix84@centrum.sk>, 2008.
-# $Id$
+# $Id: squirrelmail.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: SquirrelMail HEAD\n"

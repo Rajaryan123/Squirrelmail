@@ -1,7 +1,7 @@
 <?php
 
 ////////////////////////////////////////////////////////////////////////////
-// $Id$
+// $Id: cleanup-functions.php 8819 2005-02-08 11:35:07Z tokul $
 //
 // Description: common functions for statistics cleanup
 //

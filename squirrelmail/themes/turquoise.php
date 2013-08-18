@@ -5,9 +5,9 @@
  * Theme Name:   'Turquoise'
  *
  * Theme posted on SquirrelMail tracker #1377529
- * @copyright 2005-2012 The SquirrelMail Project Team
+ * @copyright 2005-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: turquoise.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage themes
  */

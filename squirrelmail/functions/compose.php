@@ -6,9 +6,9 @@
  * Functions for message compositon: writing a message, attaching files etc.
  *
  * @author Thijs Kinkhorst <kink at squirrelmail.org>
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: compose.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -105,9 +105,9 @@ function sq_send_mail($to, $subject, $body, $from, $cc='', $bcc='', $message='')
       $content_type = new ContentType('text/plain');
       global $special_encoding, $default_charset;
       if ($special_encoding)
-         $rfc822_header->encoding = $special_encoding;
+         $header->encoding = $special_encoding;
       else
-         $rfc822_header->encoding = '8bit';
+         $header->encoding = '8bit';
       if ($default_charset)
          $content_type->properties['charset']=$default_charset;
       $header->content_type = $content_type;

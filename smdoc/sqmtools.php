@@ -10,7 +10,7 @@
 /**
  * Alternate entry point providing links to various tools
  *
- * $Id$
+ * $Id: sqmtools.php 9183 2005-04-03 21:08:59Z ebullient $
  *
  * Values set in template:
  *  + body_template - specific filename (will be relative to TEMPLATE PATH)

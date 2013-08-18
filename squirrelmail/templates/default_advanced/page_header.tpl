@@ -5,9 +5,9 @@
  *
  * Template to create the header for each page.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id: page_header.tpl 12135 2007-01-15 08:27:10Z pdontthink $
+ * @version $Id: page_header.tpl 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage templates
  */

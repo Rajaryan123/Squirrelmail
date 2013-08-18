@@ -6,9 +6,9 @@
  * Handles deleting messages from the trash folder without
  * deleting subfolders.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: empty_trash.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -32,7 +32,7 @@ sqgetGlobalVar('delimiter', $delimiter, SQ_SESSION);
 
 // first do a security check
 sqgetGlobalVar('smtoken', $submitted_token, SQ_GET, '');
-sm_validate_security_token($submitted_token, 3600, TRUE);
+sm_validate_security_token($submitted_token, -1, TRUE);
 
 $imap_stream = sqimap_login($username, false, $imapServerAddress, $imapPort, 0);
 

@@ -1,8 +1,8 @@
 <!doctype linuxdoc system>
 <!--
- $Id$
+ $Id: user.sgml 14387 2013-07-26 17:31:02Z jervfors $
 
- Copyright (c) 2005-2012 The SquirrelMail Project Team
+ Copyright (c) 2005-2013 The SquirrelMail Project Team
  This file is part of SquirrelMail webmail interface documentation.
 
  SquirrelMail is free software; you can redistribute it and/or modify
@@ -27,7 +27,7 @@
 by the SquirrelMail Project Team:
 <!-- put your name here -->
 </author>
-<date>$Date$
+<date>$Date: 2013-07-26 19:31:02 +0200 (vie 26 de jul de 2013) $
 <abstract>
 This document provides information about usage of SquirrelMail webmail interface.
 </abstract>
@@ -35,7 +35,7 @@ This document provides information about usage of SquirrelMail webmail interface
 <toc>
 
 <p>
-Document version: $Revision$
+Document version: $Revision: 14387 $
 
 <sect>SquirrelMail overview
 <p>

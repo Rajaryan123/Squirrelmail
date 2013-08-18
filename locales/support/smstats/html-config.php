@@ -1,7 +1,7 @@
 <?php
 
 ////////////////////////////////////////////////////////////////////////////
-// $Id$
+// $Id: html-config.php 13837 2009-09-04 14:04:47Z jervfors $
 //
 // Description: configuration file for GUI messages statistic program
 //

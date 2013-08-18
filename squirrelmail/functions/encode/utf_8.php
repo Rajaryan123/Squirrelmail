@@ -10,9 +10,9 @@
  * Original code is taken from www.php.net manual comments
  * Original author: ronen at greyzone dot com
  *
- * @copyright 2004-2012 The SquirrelMail Project Team
+ * @copyright 2004-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: utf_8.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage encode
  */
@@ -26,8 +26,7 @@ function charset_encode_utf_8 ($string) {
    // don't run encoding function, if there is no encoded characters
    if (! preg_match("'&#[0-9]+;'",$string) ) return $string;
 
-    $string=preg_replace("/&#([0-9]+);/e","unicodetoutf8('\\1')",$string);
-    // $string=preg_replace("/&#[xX]([0-9A-F]+);/e","unicodetoutf8(hexdec('\\1'))",$string);
+    $string=preg_replace_callback("/&#([0-9]+);/",'unicodetoutf8',$string);
 
     return $string;
 }
@@ -40,10 +39,11 @@ function charset_encode_utf_8 ($string) {
  * Don't use it or make sure, that functions/encode/utf_8.php is
  * included.
  *
- * @param int $var decimal unicode value
+ * @param array $matches array with first element a decimal unicode value
  * @return string utf8 character
  */
-function unicodetoutf8($var) {
+function unicodetoutf8($matches) {
+    $var = $matches[1];
 
     if ($var < 128) {
         $ret = chr ($var);

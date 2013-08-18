@@ -5,9 +5,9 @@
  *
  * Displays all options relating to new mail sounds
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: newmail_opt.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage newmail
  */
@@ -153,8 +153,8 @@ if ($newmail_allowsound) {
             if ($entry == $newmail_media) {
                 echo 'selected="selected" ';
             }
-            echo 'value="' . htmlspecialchars($entry) . '">' .
-                htmlspecialchars($entry) . "</option>\n";
+            echo 'value="' . sm_encode_html_special_chars($entry) . '">' .
+                sm_encode_html_special_chars($entry) . "</option>\n";
         }
     }
     $d->close();
@@ -165,7 +165,7 @@ if ($newmail_allowsound) {
             echo 'selected="selected" ';
         }
         echo 'value="mmedia_' . $newmail_mm_name . '">'
-            .htmlspecialchars($newmail_mm_name) . "</option>\n";
+            .sm_encode_html_special_chars($newmail_mm_name) . "</option>\n";
     }
 
     if($newmail_uploadsounds) {
@@ -205,7 +205,7 @@ if ($newmail_allowsound) {
         // display currently uploaded file information
         echo  html_tag('tr')
             . html_tag('td',_("Uploaded Media File:"),'right','','style="white-space: nowrap;"')
-            . html_tag('td',($newmail_userfile_name!='' ? htmlspecialchars($newmail_userfile_name) : _("unavailable")))
+            . html_tag('td',($newmail_userfile_name!='' ? sm_encode_html_special_chars($newmail_userfile_name) : _("unavailable")))
             ."</tr>\n";
 
         if ($newmail_userfile_name!='') {
@@ -218,8 +218,8 @@ if ($newmail_allowsound) {
     echo html_tag( 'tr', "\n" .
                 html_tag( 'td', _("Current File:"), 'right', '', 'style="white-space: nowrap;"' ) .
                     html_tag( 'td', '<input type="hidden" value="' .
-                        htmlspecialchars($newmail_media) . '" name="media_default" />' .
-                        htmlspecialchars($media_output) . '', 'left' )
+                        sm_encode_html_special_chars($newmail_media) . '" name="media_default" />' .
+                        sm_encode_html_special_chars($media_output) . '', 'left' )
              ) . "\n";
 }
 echo html_tag( 'tr', "\n" .

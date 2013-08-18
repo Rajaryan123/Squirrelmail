@@ -1,8 +1,8 @@
 # French (fr_FR) folder_sizes Translation (SquirrelMail plugin)
-# Copyright (c) 2007-2012 The SquirrelMail Project Team
+# Copyright (c) 2007-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Ben Voui <intrigeri@boum.org>, 2007.
-# $Id: folder_sizes.pot 11163 2006-05-28 08:48:13Z jervfors $
+# $Id: folder_sizes.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: folder_sizes 1.5\n"

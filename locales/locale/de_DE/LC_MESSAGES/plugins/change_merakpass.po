@@ -1,9 +1,9 @@
 # German translation of SquirrelMail's change_merakpass plugin.
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
 # wieland <niemerlang.news@gmx.net>, 2003.
 msgid ""
 msgstr ""
-"Project-Id-Version: $Id$\n"
+"Project-Id-Version: $Id: change_merakpass.po 14387 2013-07-26 17:31:02Z jervfors $\n"
 "POT-Creation-Date: 2003-04-04 01:46+0200\n"
 "PO-Revision-Date: 2003-09-13 16:15+0300\n"
 "Last-Translator: wieland <niemerlang.news@gmx.net>\n"

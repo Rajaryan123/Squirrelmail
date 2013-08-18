@@ -24,7 +24,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * Workspaces allow groups of pages to overlay the default set.
  * 
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: class.workspace.php 8557 2005-01-02 07:41:14Z ebullient $
  * 
  * @package Foowd
  */

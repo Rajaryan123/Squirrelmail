@@ -9,7 +9,7 @@
    **  so we don't have too many links in the menu.
    **
    **  See the README file for details.
-   **  $Id$
+   **  $Id: functions.php 3625 2002-09-09 04:18:41Z sizzlingmercury $
    **/
 
 function mail_utilities_setup_hook() {

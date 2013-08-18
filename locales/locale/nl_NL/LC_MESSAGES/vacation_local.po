@@ -4,9 +4,9 @@
 # Rinse de Vries <rinsedevries@kde.nl>, 2007.
 # translation of vacation_local.po to
 # Dutch (nl_NL) vacation_local Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
-# $Id$
+# $Id: vacation_local.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: vacation_local\n"

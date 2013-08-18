@@ -6,9 +6,9 @@
  * This code provides various string manipulation functions that are
  * used by the rest of the SquirrelMail code.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: strings.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -1601,10 +1601,12 @@ function sm_generate_security_token($force_generate_new=FALSE)
   * @param string  $token           The token to validate
   * @param int     $validity_period The number of seconds tokens are valid
   *                                 for (set to zero to remove valid tokens
-  *                                 after only one use; use 3600 to allow
-  *                                 tokens to be reused for an hour)
-  *                                 (OPTIONAL; default is to only allow tokens
-  *                                 to be used once)
+  *                                 after only one use; set to -1 to allow
+  *                                 indefinite re-use (but still subject to
+  *                                 $max_token_age_days - see elsewhere);
+  *                                 use 3600 to allow tokens to be reused for
+  *                                 an hour) (OPTIONAL; default is to only
+  *                                 allow tokens to be used once)
   *                                 NOTE this is unrelated to $max_token_age_days
   *                                 or rather is an additional time constraint on
   *                                 tokens that allows them to be re-used (or not)
@@ -1649,9 +1651,11 @@ function sm_validate_security_token($token, $validity_period=0, $show_error=FALS
    $timestamp = $tokens[$token];
 
    // whether valid or not, we want to remove it from
-   // user prefs if it's old enough
+   // user prefs if it's old enough (unless requested to
+   // bypass this (in which case $validity_period is -1))
    //
-   if ($timestamp < $now - $validity_period)
+   if ($validity_period >= 0
+    && $timestamp < $now - $validity_period)
    {
       unset($tokens[$token]);
       setPref($data_dir, $username, 'security_tokens', serialize($tokens));
@@ -1672,5 +1676,40 @@ function sm_validate_security_token($token, $validity_period=0, $show_error=FALS
    //
    return TRUE;
 
+}
+
+/**
+  * Wrapper for PHP's htmlspecialchars() that
+  * attempts to add the correct character encoding
+  *
+  * @param string $string The string to be converted
+  * @param int $flags A bitmask that controls the behavior of htmlspecialchars()
+  *                   (See http://php.net/manual/function.htmlspecialchars.php )
+  *                   (OPTIONAL; default ENT_COMPAT)
+  * @param string $encoding The character encoding to use in the conversion
+  *                         (OPTIONAL; default automatic detection)
+  * @param boolean $double_encode Whether or not to convert entities that are
+  *                               already in the string (only supported in
+  *                               PHP 5.2.3+) (OPTIONAL; default TRUE)
+  *
+  * @return string The converted text
+  *
+  */
+function sm_encode_html_special_chars($string, $flags=ENT_COMPAT,
+                                      $encoding=NULL, $double_encode=TRUE)
+{
+   if (!$encoding)
+   {
+      global $default_charset;
+      if ($default_charset == 'iso-2022-jp')
+         $default_charset = 'EUC-JP';
+      $encoding = $default_charset;
+   }
+
+// TODO: Is adding this check an unnecessary performance hit?
+   if (check_php_version(5, 2, 3))
+      return htmlspecialchars($string, $flags, $encoding, $double_encode);
+
+   return htmlspecialchars($string, $flags, $encoding);
 }
 

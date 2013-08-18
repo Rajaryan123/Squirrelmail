@@ -3,7 +3,7 @@
 # Copyright (C) 2003,2007 Free Software Foundation, Inc.
 # Tomas Kuliavas <tokul@users.sourceforge.net>, 2003.
 # Tomas Kuliavas <tokul@users.sourceforge.net>, 2007.
-# $Id$
+# $Id: abook_group.po 12741 2007-10-25 22:47:34Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: abook_group 0.51.1\n"

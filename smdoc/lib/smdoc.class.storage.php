@@ -12,7 +12,7 @@
  * data in the DB in the correct format.
  * Permissions to common methods are denied (Nobody).
  *
- * $Id$
+ * $Id: smdoc.class.storage.php 7340 2004-05-01 19:55:48Z ebullient $
  * @package smdoc
  */
 

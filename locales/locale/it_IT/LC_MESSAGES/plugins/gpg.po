@@ -1,9 +1,9 @@
 # Italian (it_IT) gpg Translation (SquirrelMail plugin)
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Mij <Mij@bitchx.it> , 2003.
 # Andrea Volani <andreavola@gmail.com>, 2009.
-# $Id$
+# $Id: gpg.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: gpg 2.1\n"
@@ -526,7 +526,7 @@ msgstr "Cos'&egrave; una 'chiave fidata'?"
 #. * @todo Convert most of this file to HTML, and only use
 #. *       parts of in inside PHP tags
 #. *
-#. * $Id$
+#. * $Id: gpg.po 14387 2013-07-26 17:31:02Z jervfors $
 #.
 #: help/base.php:39 help/troubleshooting.php:11
 msgid "Troubleshooting"
@@ -1549,12 +1549,12 @@ msgstr "Portachiavi non modificabile, funzioni del portachiavi disattivate."
 #. * in keyring_main.php
 #. *
 #. *
-#. * Copyright (c) 1999-2009 The SquirrelMail Project Team
+#. * Copyright (c) 1999-2013 The SquirrelMail Project Team
 #. * Licensed under the GNU GPL. For full terms see the file COPYING.
 #. *
 #. * Copyright (c) 2002-2005 Braverock Ventures
 #. *
-#. * $Id$
+#. * $Id: gpg.po 14387 2013-07-26 17:31:02Z jervfors $
 #. *
 #.
 #. Showing
@@ -2573,7 +2573,7 @@ msgstr "Importazione chiave con KeyID:"
 #. *
 #. * Default page called when accessing GPG plugin options.
 #. *
-#. * $Id$
+#. * $Id: gpg.po 14387 2013-07-26 17:31:02Z jervfors $
 #.
 #. *
 #. * assume that system prefs and user prefs have already been loaded

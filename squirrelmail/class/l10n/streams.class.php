@@ -20,9 +20,9 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
  * MA  02110-1301, USA
  *
- * @copyright 2004-2012 The SquirrelMail Project Team
+ * @copyright 2004-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: streams.class.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage i18n
  */

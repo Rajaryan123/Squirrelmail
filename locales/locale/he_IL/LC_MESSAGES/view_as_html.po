@@ -1,10 +1,10 @@
 # Hebrew translation of SquirrelMail's view as html plugin.
-# Copyright (c) 2002-2012 The SquirrelMail Project Team
+# Copyright (c) 2002-2013 The SquirrelMail Project Team
 # Yoav <yoavb@zavit.net.il>, 2002.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: $Id$\n"
+"Project-Id-Version: $Id: view_as_html.po 14387 2013-07-26 17:31:02Z jervfors $\n"
 "POT-Creation-Date: 2002-06-18 11:22-0600\n"
 "PO-Revision-Date: 2003-09-07 12:03+0300\n"
 "Last-Translator: Yoav <yoavb@zavit.net.il>\n"

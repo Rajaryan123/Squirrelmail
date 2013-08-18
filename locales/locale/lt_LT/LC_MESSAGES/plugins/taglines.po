@@ -1,8 +1,8 @@
 # Lithuanian translation of
 # SquirrelMail's taglines plugin.
-# Copyright (c) 2004-2012 The SquirrelMail Project Team
+# Copyright (c) 2004-2013 The SquirrelMail Project Team
 # Tomas Kuliavas <tokul@users.sourceforge.net>, 2004.
-# $Id$
+# $Id: taglines.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: taglines 0.4\n"

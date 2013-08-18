@@ -11,7 +11,7 @@
 /**
  * Alternate entry point providing links for document creation
  *
- * $Id$
+ * $Id: sqmcreate.php 9183 2005-04-03 21:08:59Z ebullient $
  *
  * Values set in template:
  *  + classlist     - below

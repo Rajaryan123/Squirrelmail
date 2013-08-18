@@ -3,9 +3,9 @@
 /**
  * Message and Spam Filter Plugin - Spam Options
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: spamoptions.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage filters
  */
@@ -175,7 +175,7 @@ if (isset($action) && $action == 'spam') {
     echo html_tag( 'p', '', 'center' ) .
          '[<a href="spamoptions.php?action=spam">' . _("Edit") . '</a>]' .
          ' - [<a href="../../src/options.php">' . _("Done") . '</a>]</div><br /><br />';
-    printf( _("Spam is sent to %s."), ($filters_spam_folder?'<b>'.htmlspecialchars(imap_utf7_decode_local($filters_spam_folder)).'</b>':'[<i>'._("not set yet").'</i>]' ) );
+    printf( _("Spam is sent to %s."), ($filters_spam_folder?'<b>'.sm_encode_html_special_chars(imap_utf7_decode_local($filters_spam_folder)).'</b>':'[<i>'._("not set yet").'</i>]' ) );
     echo '<br />';
     printf( _("Spam scan is limited to %s."), '<b>' . ( ($filters_spam_scan == 'new')?_("Unread messages only"):_("All messages") ) . '</b>' );
     echo '</p>'.

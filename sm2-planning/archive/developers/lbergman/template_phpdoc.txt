@@ -1,8 +1,8 @@
 <?php
 /*
- * @version $Id$
- * @author $Author$ 
- * $Date$
+ * @version $Id: template_phpdoc.txt 4112 2002-11-06 04:02:53Z sizzlingmercury $
+ * @author $Author: sizzlingmercury $ 
+ * $Date: 2002-11-06 05:02:53 +0100 (mié 06 de nov de 2002) $
  * @since SquirrelMail_2.9.0
  *
  * filename.php - a class to demonstrate the use of phpdoc

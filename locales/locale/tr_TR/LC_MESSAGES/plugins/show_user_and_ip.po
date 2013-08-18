@@ -2,7 +2,7 @@
 # Copyright (C) 2005 Kerem Erkan
 # This file is distributed under the same license as the PACKAGE package.
 # Kerem Erkan <kerem.erkan@basari.com.tr>, 2005.
-# $Id$
+# $Id: show_user_and_ip.po 9909 2005-08-06 03:37:45Z tokul $
 msgid ""
 msgstr ""
 "Project-Id-Version: show_user_and_ip VERSION\n"

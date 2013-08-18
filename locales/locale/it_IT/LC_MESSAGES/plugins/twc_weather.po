@@ -1,9 +1,9 @@
 # Italian (it_IT) twc_weather Translation (SquirrelMail plugin)
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Jason Novak <jason@sheffieldave.com>, 2003.
 # Andrea Volani <andreavola@gmail.com>, 2009.
-# $Id$
+# $Id: twc_weather.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: twc_weather 1.3p3b-rc2\n"

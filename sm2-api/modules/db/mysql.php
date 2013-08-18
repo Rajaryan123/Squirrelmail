@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Philippe Mingo
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: mysql.php 1670 2001-10-31 16:45:25Z philippe_mingo $
  */
 
 /**
@@ -14,7 +14,7 @@
  */
 class ZkMod_db_mysql {
 
-    var $ver = '$Id$';
+    var $ver = '$Id: mysql.php 1670 2001-10-31 16:45:25Z philippe_mingo $';
     var $name = 'db/mysql';
 
     var $srv;	// backward pointer to the service

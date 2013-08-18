@@ -1,7 +1,7 @@
 # Lithuanian Disk Quota Plugin Translation.
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
 # Tomas Kuliavas <tokul@users.sourceforge.net>, 2003
-# $Id$
+# $Id: disk_quota.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: disk_quota 3.0.3\n"

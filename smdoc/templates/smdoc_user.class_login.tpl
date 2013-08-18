@@ -11,7 +11,7 @@
  * Template for user login
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: smdoc_user.class_login.tpl 8332 2004-11-05 23:46:50Z ebullient $
  *
  * @package smdoc
  * @subpackage template

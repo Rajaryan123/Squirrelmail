@@ -10,7 +10,7 @@
 /**
  * Alternate entry point allowing content to be searched.
  *
- * $Id$
+ * $Id: sqmsearch.php 9183 2005-04-03 21:08:59Z ebullient $
  * 
  * @package smdoc
  * @subpackage extern

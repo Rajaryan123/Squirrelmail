@@ -21,9 +21,9 @@
  *                                 could be an array!
  *              $el['Info']      - Additional info about this contact
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: addrbook_addedit.tpl 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage templates
  */
@@ -61,8 +61,8 @@ $formname = $edit ? 'editaddr' : 'addaddr';
     if (is_array($values['Email'])) {
         echo '<select name="'.$formname.'[email]" id="email">'."\n";
         foreach ($values['Email'] as $email) {
-//FIXME: htmlspecialchars should not be needed inside any template files - I think values are already sanitized by the time they get here
-            echo '<option value="'.htmlspecialchars($email).'">'.htmlspecialchars($email).'</option>'."\n";
+//FIXME: sm_encode_html_special_chars should not be needed inside any template files - I think values are already sanitized by the time they get here
+            echo '<option value="'.sm_encode_html_special_chars($email).'">'.sm_encode_html_special_chars($email).'</option>'."\n";
         }
         echo '</select>'."\n";
     } else {
@@ -107,10 +107,10 @@ $formname = $edit ? 'editaddr' : 'addaddr';
    <select name="backend" id="backend">
     <?php
         foreach ($writable_backends as $id=>$name) {
-//FIXME: htmlspecialchars should not be needed inside any template files - I think values are already sanitized by the time they get here
+//FIXME: sm_encode_html_special_chars should not be needed inside any template files - I think values are already sanitized by the time they get here
             echo '<option value="' . $id
                . ($current_backend == $id ? '" selected="selected"' : '"')
-               . '>' . htmlspecialchars($name) . '</option>' . "\n";
+               . '>' . sm_encode_html_special_chars($name) . '</option>' . "\n";
         }
     ?>
    </select>

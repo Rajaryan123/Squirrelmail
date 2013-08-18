@@ -6,7 +6,7 @@
  * This file is an addition/modification to the
  * Framework for Object Orientated Web Development (Foowd).
  *
- * $Id$
+ * $Id: class.user.php 8975 2005-03-09 19:56:14Z ebullient $
  */
 
 /**

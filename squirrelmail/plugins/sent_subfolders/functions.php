@@ -5,9 +5,9 @@
  *
  * This is a standard SquirrelMail 1.2 API for plugins.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: functions.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage sent_subfolders
  */
@@ -131,6 +131,10 @@ function save_option_sent_subfolders_setting($option) {
     } else {
         setPref($data_dir, $username, 'use_sent_subfolders', SMPREF_ON);
         setPref($data_dir, $username, 'move_to_sent', SMPREF_ON);
+        $check_sent_subfolders_base = getPref($data_dir, $username, 'sent_subfolders_base', '');
+        if ($check_sent_subfolders_base === '') {
+            setPref($data_dir, $username, 'sent_subfolders_base', $sent_subfolders_base);
+        }
     }
 
     /* Now just save the option as normal. */

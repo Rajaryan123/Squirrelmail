@@ -18,9 +18,9 @@
  *
  * @link ftp://elsie.nci.nih.gov/pub/ GNU C time zone implementation
  * @link some source of POSIX TZ names
- * @copyright 2005-2012 The SquirrelMail Project Team
+ * @copyright 2005-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: standard.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage timezones
  */

@@ -11,7 +11,7 @@
  * Template for object history
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: smdoc_error.object_bad_workspace.tpl 7888 2004-08-12 01:51:36Z ebullient $
  * 
  * @package smdoc
  * @subpackage template

@@ -8,9 +8,9 @@
   * class with any custom functionality needed to interface a target
   * templating engine with SquirrelMail.
   *
-  * @copyright 2003-2012 The SquirrelMail Project Team
+  * @copyright 2003-2013 The SquirrelMail Project Team
   * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-  * @version $Id$
+  * @version $Id: Template.class.php 14387 2013-07-26 17:31:02Z jervfors $
   * @package squirrelmail
   * @subpackage Template
   * @since 1.5.2
@@ -1480,7 +1480,7 @@ FIXME: We could make the incoming array more complex so it can
 
         if (empty($template)) {
 
-            trigger_error('The template "' . htmlspecialchars($file)
+            trigger_error('The template "' . sm_encode_html_special_chars($file)
                           . '" could not be fetched!', E_USER_ERROR);
 
         } else {

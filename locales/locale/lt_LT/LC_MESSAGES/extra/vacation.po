@@ -1,10 +1,10 @@
 # SquirrelMail Lithuanian Translation.
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # Tomas Kuliavas <tokul@users.sourceforge.net>, 2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: $Id$\n"
+"Project-Id-Version: $Id: vacation.po 14387 2013-07-26 17:31:02Z jervfors $\n"
 "POT-Creation-Date: 2003-09-13 15:38+0300\n"
 "PO-Revision-Date: 2003-09-13 15:48+0300\n"
 "Last-Translator: Tomas Kuliavas <tokul@users.sourceforge.net>\n"

@@ -11,7 +11,7 @@
 # ** Philipe Mingo <mingo@rotedic.com>
 # ** Konstantin Riabitsev <icon@duke.edu>
 # **
-# **  $Id$
+# **  $Id: mergepo 5740 2003-09-20 09:27:00Z tokul $
 
 if [ -z "$1" ]; then
  echo "USAGE: mergepo [localename]"

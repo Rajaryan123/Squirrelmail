@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Partridge
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: service.php 2756 2002-04-25 04:52:32Z jtai $
  */
 
 /**
@@ -17,7 +17,7 @@ class ZkSvc_html {
 
     /* Constants */
     var $name = 'html'; // Module name
-    var $ver = '$Id$';
+    var $ver = '$Id: service.php 2756 2002-04-25 04:52:32Z jtai $';
 
     /* Properties */
     var $zkld;

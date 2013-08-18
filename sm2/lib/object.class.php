@@ -8,7 +8,7 @@
  *
  * The base of all objects
  *
- * $Id$
+ * $Id: object.class.php 5253 2003-07-09 16:11:41Z jangliss $
  */
 
 

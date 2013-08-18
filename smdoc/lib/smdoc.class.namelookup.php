@@ -11,7 +11,7 @@
  * Name lookup implementation used to map easy object name like 'faq' to 
  * an objectid/classid pair for retrieval.
  *
- * $Id$
+ * $Id: smdoc.class.namelookup.php 8557 2005-01-02 07:41:14Z ebullient $
  *
  * @package smdoc
  */

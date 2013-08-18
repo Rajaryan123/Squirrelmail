@@ -1,5 +1,5 @@
 ##
-# $Id$
+# $Id: squirrelmail.spec 12325 2007-03-08 12:13:09Z jervfors $
 %define spec_release 1
 
 ##

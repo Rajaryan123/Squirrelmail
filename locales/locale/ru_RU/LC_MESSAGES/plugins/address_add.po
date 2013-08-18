@@ -1,6 +1,6 @@
 # translation of address_add.po into Russian
-# Copyright (C) 2003-2012 The SquirrelMail Project Team
-# $Id$
+# Copyright (C) 2003-2013 The SquirrelMail Project Team
+# $Id: address_add.po 14387 2013-07-26 17:31:02Z jervfors $
 # Jimmy Conner <jimmy@advcs.org>, 2003.
 # Gregory Mokhin <mok@kde.ru>, 2004.
 msgid ""

@@ -3,9 +3,9 @@
 /**
  * options.php -- SpamCop options page
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: options.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage spamcop
  */
@@ -143,7 +143,7 @@ spamcop_load_function();
             '<small>(' . _("see below") . ')</small>','right','','valign="top"');
           ?>
           <td valign="top"><form method="post" action="options.php">
-            <input type="text" size="30" name="ID" value="<?php echo htmlspecialchars($spamcop_id) ?>" />
+            <input type="text" size="30" name="ID" value="<?php echo sm_encode_html_special_chars($spamcop_id) ?>" />
             <input type="hidden" name="action" value="save_id" />
             <?php
               echo '<input type="submit" value="' . _("Save ID") . "\" />\n";

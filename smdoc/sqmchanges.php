@@ -10,7 +10,7 @@
 /**
  * Alternate entry point providing a list of recent changes.
  *
- * $Id$
+ * $Id: sqmchanges.php 9183 2005-04-03 21:08:59Z ebullient $
  * 
  * Lists 20 objects (not users) most recently edited.
  * Could be workspace, HTML, plain, whatever.

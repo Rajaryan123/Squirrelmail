@@ -2,7 +2,7 @@
 # Copyright (C) 2004 THE abook_group'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the abook_group package.
 # Ondra 'Kepi' Kudlík <kepi@cacwa.cz>, 2004.
-# $Id$
+# $Id: abook_group.po 13711 2009-05-16 11:30:48Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: abook_group 0.39c\n"

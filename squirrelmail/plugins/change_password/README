@@ -356,4 +356,4 @@ ABOUT MYSQL BACKEND
 If saslcrypt and unixcrypt are not enabled, plugin defaults to plaintext 
 passwords.
 
-$Id$
+$Id: README 13122 2008-05-08 14:25:42Z kink $

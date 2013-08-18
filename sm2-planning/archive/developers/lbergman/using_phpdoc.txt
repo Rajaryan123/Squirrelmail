@@ -1,6 +1,6 @@
 $Header$
-$Author$
-$Date$
+$Author: sizzlingmercury $
+$Date: 2002-11-06 05:02:53 +0100 (mié 06 de nov de 2002) $
 
 Using PHPDoc to provide detailed developer documentation
 ========================================================
@@ -26,8 +26,8 @@ Using PHPDoc to provide detailed developer documentation
  possible. Here are some ways to do it.
  
  @author Goerge Jefferson <gjefferson@spacelysprokets.com
- @author $Author$
- @author $Author$ <gjefferson@spacelysprokets.com>
+ @author $Author: sizzlingmercury $
+ @author $Author: sizzlingmercury $ <gjefferson@spacelysprokets.com>
  
  Version
  ==============

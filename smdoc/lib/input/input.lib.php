@@ -13,7 +13,7 @@
  * Ensures incoming variables are cleaned up, provides base
  * input class used by other elements for value manipulation.
  * 
- * $Id$
+ * $Id: input.lib.php 8557 2005-01-02 07:41:14Z ebullient $
  * 
  * @package smdoc
  * @subpackage input

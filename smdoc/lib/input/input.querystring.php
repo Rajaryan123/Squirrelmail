@@ -10,7 +10,7 @@
 /**
  * Manage input via querystring ($_GET).
  * 
- * $Id$
+ * $Id: input.querystring.php 8557 2005-01-02 07:41:14Z ebullient $
  * @package smdoc
  * @subpackage input
  */

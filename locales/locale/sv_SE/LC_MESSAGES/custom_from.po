@@ -1,8 +1,8 @@
 # Swedish (sv_SE) custom_from Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Fredrik Jervfors <jervfors@squirrelmail.org>, 2004-2009.
-# $Id$
+# $Id: custom_from.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: custom_from\n"

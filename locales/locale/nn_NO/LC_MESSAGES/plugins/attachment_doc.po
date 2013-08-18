@@ -1,8 +1,8 @@
 # translation of attachment_doc.po to Nynorsk
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # Simon Newell <simonnew@speedymail.org>, 2004.
 # Ola Ketil Siqveland <olaketil@hotmail.com>, 2004-2006.
-# $Id$
+# $Id: attachment_doc.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: attachment_doc 1.2\n"

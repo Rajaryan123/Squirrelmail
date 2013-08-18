@@ -1,9 +1,9 @@
 # Slovak (sk_SK) address_add Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Jimmy Conner <jimmy@advcs.org>, 2003.
 # Ivan Masár <helix84@centrum.sk>, 2008.
-# $Id$
+# $Id: address_add.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: address_add 1.9\n"

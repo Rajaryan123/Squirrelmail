@@ -1,8 +1,8 @@
 # Vietnamese (vi_VI) show_headers Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Clytie Siddall <clytie@riverland.net.au>, 2008.
-# $Id: show_headers.pot 11090 2006-04-25 07:34:57Z jervfors $
+# $Id: show_headers.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: show_headers 1.3\n"

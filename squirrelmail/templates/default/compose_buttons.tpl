@@ -12,9 +12,9 @@
  *    $accesskey_compose_save_draft  - The access key to be use for the Save Draft button
  *    $accesskey_compose_send        - The access key to be use for the Send button
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: compose_buttons.tpl 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage templates
  */

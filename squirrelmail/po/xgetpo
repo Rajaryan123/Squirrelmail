@@ -4,7 +4,7 @@
 #
 # Philipe Mingo <mingo@rotedic.com>
 #
-# $Id$
+# $Id: xgetpo 14234 2011-12-18 01:32:51Z pdontthink $
 
 # force use of same locale in order to keep same sorting order
 LC_ALL=en_US.ISO8859-1

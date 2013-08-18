@@ -10,7 +10,7 @@
 /**
  * Constants for passing success/error status across a form submission.
  *
- * $Id$
+ * $Id: smdoc.error.constants.php 7340 2004-05-01 19:55:48Z ebullient $
  * 
  * @package smdoc
  * @subpackage error

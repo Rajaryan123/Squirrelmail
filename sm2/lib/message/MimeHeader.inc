@@ -8,7 +8,7 @@
  *
  * This contains functions needed to handle mime messages.
  *
- * $Id$
+ * $Id: MimeHeader.inc 5026 2003-06-12 21:23:55Z stekkel $
  */
 
 class MimeHeader extends Header{

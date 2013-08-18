@@ -1,8 +1,8 @@
 # Catalan Disk Quota Plugin Translation.
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the PACKAGE package.
 # Marc Revenga <smurfing@vilabarrufet.homelinux.net>, 2003.
-# $Id$
+# $Id: disk_quota.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: disk_quota 3.0.2\n"

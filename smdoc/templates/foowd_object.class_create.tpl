@@ -11,7 +11,7 @@
  * Template for user creation
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: foowd_object.class_create.tpl 7888 2004-08-12 01:51:36Z ebullient $
  *
  * @package smdoc
  * @subpackage template

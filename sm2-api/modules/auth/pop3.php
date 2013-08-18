@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Philippe Mingo
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: pop3.php 1585 2001-10-18 19:04:50Z philippe_mingo $
  */
 
 /**
@@ -14,7 +14,7 @@
  */
 class ZkMod_auth_pop3 {
 
-    var $ver = '$Id$';
+    var $ver = '$Id: pop3.php 1585 2001-10-18 19:04:50Z philippe_mingo $';
     var $name = 'auth/pop3';
 
     var $srv;	  // backward pointer to the service

@@ -6,9 +6,9 @@
  * This is where it all happens :)
  *
  * @author Jason Munro <jason at stdbev.com>
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: options.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage info
  */
@@ -75,7 +75,7 @@ echo '<br /><div style="text-align: center;"><b>'._("IMAP server information")."
      "</b><br />\n";
 
 foreach($caps_array[0] as $value) {
-    echo htmlspecialchars($value);
+    echo sm_encode_html_special_chars($value);
 }
 
 echo "</td></tr><tr><td>\n";
@@ -92,8 +92,8 @@ if (!isset($submit) || $submit == 'default') {
     }
 }
 else {
-    echo 'folder_prefix = ' . htmlspecialchars($folder_prefix)."<br />\n" .
-         'default_charset = '.htmlspecialchars($default_charset)."\n";
+    echo 'folder_prefix = ' . sm_encode_html_special_chars($folder_prefix)."<br />\n" .
+         'default_charset = '.sm_encode_html_special_chars($default_charset)."\n";
 }
 
 echo "<br /></td></tr></table><br />\n";

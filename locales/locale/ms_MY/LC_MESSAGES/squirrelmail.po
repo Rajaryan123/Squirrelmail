@@ -1,7 +1,7 @@
 # Malay Language (Malaysia) SquirrelMail Translation
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # Sapuan bin Samion <sapuan@pc.jaring.my>, 2001-2003
-# $Id$
+# $Id: squirrelmail.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: SquirrelMail\n"

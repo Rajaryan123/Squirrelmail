@@ -11,7 +11,7 @@
  * Template for list of recent changes
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: smdoc_external.changes.tpl 7888 2004-08-12 01:51:36Z ebullient $
  * 
  * @package smdoc
  * @subpackage template

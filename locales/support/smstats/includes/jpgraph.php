@@ -4,7 +4,7 @@
 // Description:	PHP4 Graph Plotting library. Base module.
 // Created: 	2001-01-08
 // Author:	Johan Persson (johanp@aditus.nu)
-// Ver:		$Id$
+// Ver:		$Id: jpgraph.php 8819 2005-02-08 11:35:07Z tokul $
 //
 // License:	This code is released under QPL 1.0 
 // Copyright (C) 2001,2002 Johan Persson 

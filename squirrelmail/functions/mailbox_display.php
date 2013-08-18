@@ -6,9 +6,9 @@
  * This contains functions that display mailbox information, such as the
  * table row that has sender, date, subject, etc...
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: mailbox_display.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -554,11 +554,11 @@ function prepareMessageList(&$aMailbox, $aProps) {
                             $sMailbox  = (isset($aAddr[SQM_ADDR_MAILBOX]))  ? $aAddr[SQM_ADDR_MAILBOX]  : '';
                             $sHost     = (isset($aAddr[SQM_ADDR_HOST]))     ? $aAddr[SQM_ADDR_HOST]     : '';
                             if ($sPersonal) {
-                                $title .= htmlspecialchars($sMailbox.'@'.$sHost).', ';
+                                $title .= sm_encode_html_special_chars($sMailbox.'@'.$sHost).', ';
                             } else {
                                 // if $value gets truncated we need to add the addresses with no
                                 // personal name as well
-                                $title_maybe .= htmlspecialchars($sMailbox.'@'.$sHost).', ';
+                                $title_maybe .= sm_encode_html_special_chars($sMailbox.'@'.$sHost).', ';
                             }
                         }
                         if ($title) {
@@ -1297,7 +1297,7 @@ function handleMessageListForm($imapConnection, &$aMailbox, $sButton='',
         // don't do anything to any messages until we have done security check
         // FIXME: not sure this code really belongs here, but there's nowhere else to put it with this architecture
         sqgetGlobalVar('smtoken', $submitted_token, SQ_FORM, '');
-        sm_validate_security_token($submitted_token, 3600, TRUE);
+        sm_validate_security_token($submitted_token, -1, TRUE);
 
         // make sure message UIDs are sanitized (BIGINT)
         foreach ($aUid as $i => $uid)

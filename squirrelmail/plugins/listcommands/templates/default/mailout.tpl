@@ -10,9 +10,9 @@
   *                 configured (an array of list addresses, 
   *                 keyed by an ID number)
   *
-  * @copyright 1999-2012 The SquirrelMail Project Team
+  * @copyright 1999-2013 The SquirrelMail Project Team
   * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-  * @version $Id$
+  * @version $Id: mailout.tpl 14387 2013-07-26 17:31:02Z jervfors $
   * @package plugins
   * @subpackage listcommands
   */
@@ -42,7 +42,7 @@ extract($t);
     
     foreach($idents as $nr=>$data) {
         echo '<option value="' . $nr . '">' .
-            htmlspecialchars(
+            sm_encode_html_special_chars(
                     $data['full_name'].' <'.
                     $data['email_address'] . '>') .
             "</option>\n";		    
@@ -53,14 +53,14 @@ extract($t);
 } else {
 
     echo _("From:");
-    echo htmlspecialchars($idents[0]['full_name'].' <'.$idents[0]['email_address'].'>');
+    echo sm_encode_html_special_chars($idents[0]['full_name'].' <'.$idents[0]['email_address'].'>');
 }
 ?>
 <br /><br />
-<input type="hidden" name="send_to" value="<?php echo htmlspecialchars($send_to); ?>" />
-<input type="hidden" name="subject" value="<?php echo htmlspecialchars($subject); ?>" />
-<input type="hidden" name="body" value="<?php echo htmlspecialchars($body); ?>" />
-<input type="hidden" name="mailbox" value="<?php echo htmlspecialchars($mailbox); ?>" />
+<input type="hidden" name="send_to" value="<?php echo sm_encode_html_special_chars($send_to); ?>" />
+<input type="hidden" name="subject" value="<?php echo sm_encode_html_special_chars($subject); ?>" />
+<input type="hidden" name="body" value="<?php echo sm_encode_html_special_chars($body); ?>" />
+<input type="hidden" name="mailbox" value="<?php echo sm_encode_html_special_chars($mailbox); ?>" />
 <input type="submit" name="send1" value="<?php echo _("Send Mail"); ?>" />
 <br />
 </form>

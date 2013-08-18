@@ -11,7 +11,7 @@
  * Template for user list.
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: smdoc_news.class_list.tpl 8335 2004-11-06 04:38:50Z ebullient $
  *
  * @package smdoc
  * @subpackage template

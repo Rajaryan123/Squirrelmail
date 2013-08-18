@@ -2,7 +2,7 @@
 # Copyright (C) 2004 Daniel K. Imori
 # This file is distributed under the same license as the vkeyboard package.
 # Daniel K. Imori <daniel@bastion.com.br>, 2004.
-# $Id$
+# $Id: vkeyboard.po 14205 2011-12-10 09:36:50Z pdontthink $
 msgid ""
 msgstr ""
 "Project-Id-Version: vkeyboard 0.8\n"

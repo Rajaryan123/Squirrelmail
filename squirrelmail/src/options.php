@@ -6,9 +6,9 @@
  * Displays the options page. Pulls from proper user preference files
  * and config.php. Displays preferences as selected and other options.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: options.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage prefs
  */
@@ -203,7 +203,7 @@ if ( !@is_file( $optpage_file ) ) {
 // security check before saving anything...
 //FIXME: what about SMOPT_MODE_LINK??
 if ($optmode == SMOPT_MODE_SUBMIT) {
-   sm_validate_security_token($submitted_token, 3600, TRUE);
+   sm_validate_security_token($submitted_token, -1, TRUE);
 }
 
 $optpage_save_error=array();

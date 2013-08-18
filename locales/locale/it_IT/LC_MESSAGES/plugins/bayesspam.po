@@ -1,9 +1,9 @@
 # Italian (it_IT) bayesspam Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Rocco Scappatura <rocsca@sttspa.it>, 2010.
 # Andrea Volani <andreavola@gmail.com>, 2009.
-# $Id$
+# $Id: bayesspam.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: bayesspam 3.7.1\n"

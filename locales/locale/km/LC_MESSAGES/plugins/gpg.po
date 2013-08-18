@@ -2,7 +2,7 @@
 # Auk Piseth <piseth_dv@khmeros.info>, 2008.
 # Khoem Sokhem <khoemsokhem@khmeros.info>, 2009.
 # Copyright (c) 2008-2009 KhmerOS Project
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 msgid ""
 msgstr ""
 "Project-Id-Version: gpg\n"
@@ -488,7 +488,7 @@ msgstr "តើ​អ្វី​ជា 'សោ​ទុកចិត្ត' ?"
 #. * @todo Convert most of this file to HTML, and only use
 #. *       parts of in inside PHP tags
 #. *
-#. * $Id$
+#. * $Id: gpg.po 14387 2013-07-26 17:31:02Z jervfors $
 #.
 #: help/base.php:39 help/troubleshooting.php:11
 msgid "Troubleshooting"
@@ -1398,12 +1398,12 @@ msgstr "Keyring មិនអាច​កែសម្រួល​បានទេ 
 #. * in keyring_main.php
 #. *
 #. *
-#. * Copyright (c) 1999-2005 The SquirrelMail development team
+#. * Copyright (c) 1999-2013 The SquirrelMail development team
 #. * Licensed under the GNU GPL. For full terms see the file COPYING.
 #. *
 #. * Copyright (c) 2002-2005 Braverock Ventures
 #. *
-#. * $Id$
+#. * $Id: gpg.po 14387 2013-07-26 17:31:02Z jervfors $
 #. *
 #.
 #. Showing
@@ -2289,7 +2289,7 @@ msgstr "នាំចូល​សោ​ជាមួយ​លេខ​សម្គ
 #. *
 #. * Default page called when accessing GPG plugin options.
 #. *
-#. * $Id$
+#. * $Id: gpg.po 14387 2013-07-26 17:31:02Z jervfors $
 #.
 #. *
 #. * assume that system prefs and user prefs have already been loaded

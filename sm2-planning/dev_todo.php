@@ -5,12 +5,12 @@
  * Copyright (c) 1999-2002 The SquirrelMail development team
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: dev_todo.php 4868 2003-05-13 16:38:28Z tassium $
  */
 include_once('common_header.inc');
 set_title('Development Items');
 set_original_author('ebullient');
-set_attributes('$Author$','$Revision$','$Date$');
+set_attributes('$Author: tassium $','$Revision: 4868 $','$Date: 2003-05-13 18:38:28 +0200 (mar 13 de may de 2003) $');
 print_header();
 ?>
 

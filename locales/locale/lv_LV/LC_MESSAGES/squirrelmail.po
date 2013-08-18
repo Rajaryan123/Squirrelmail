@@ -1,9 +1,9 @@
 # Latvian (lv_LV) SquirrelMail Translation
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Kaspars Namnieks <kasparsn@rozalinde.lv>, 2006.
 # Ivars Strazdiņš <ivars.strazdins@gmail.com>, 2008-2009.
-# $Id: squirrelmail.pot 13560 2009-04-17 14:16:04Z jervfors $
+# $Id: squirrelmail.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: SquirrelMail HEAD\n"

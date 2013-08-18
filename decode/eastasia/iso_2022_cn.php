@@ -4,9 +4,9 @@
  *
  * This script provides iso-2022-cn (rfc1922) decoding functions.
  *
- * @copyright (c) 2004-2012 The SquirrelMail Project Team
+ * @copyright (c) 2004-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: iso_2022_cn.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package decode
  * @subpackage eastasia
  */

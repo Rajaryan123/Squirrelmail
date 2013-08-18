@@ -2,7 +2,7 @@
 /**
  * Language configuration file
  *
- * Copyright (c) 2005-2012 The SquirrelMail Project Team
+ * Copyright (c) 2005-2013 The SquirrelMail Project Team
  *
  * This file is part of SquirrelMail webmail interface. It is distributed
  * together with other translation files and is used to enable 
@@ -22,7 +22,7 @@
  * along with SquirrelMail; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * @version $Id: setup.php 11413 2006-07-19 12:38:11Z tokul $
+ * @version $Id: setup.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package locales
  */
 

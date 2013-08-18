@@ -1,8 +1,8 @@
 # SquirrelMail Georgian translation
-# Copyright (c) 2006-2012 The SquirrelMail Project Team
+# Copyright (c) 2006-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the squirrelmail package.
 # Tamuna <tchangiani@saba.edu.ge>, 2006.
-# $Id$
+# $Id: squirrelmail.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: squirrelmail 1.4.5\n"

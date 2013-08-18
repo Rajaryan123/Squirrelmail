@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id$
+# $Id: makedoc.sh 12140 2007-01-16 20:08:46Z kink $
 
 # WARNING. In order to use it with SquirrelMail, you should
 # modify phpDocumentor.ini and add .mod extension

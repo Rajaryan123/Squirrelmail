@@ -12,7 +12,7 @@
  * Manage Checkbox Form input
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: input.checkbox.php 8557 2005-01-02 07:41:14Z ebullient $
  *
  * @package smdoc
  * @subpackage input

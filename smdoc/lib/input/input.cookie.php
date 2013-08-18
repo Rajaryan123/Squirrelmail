@@ -23,7 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * Manage Cookie Input
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: input.cookie.php 8557 2005-01-02 07:41:14Z ebullient $
  *
  * @package smdoc
  * @subpackage input

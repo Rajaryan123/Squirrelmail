@@ -1,6 +1,6 @@
 /*
 **
-** Copyright (c) 2010-2012 The SquirrelMail Project Team
+** Copyright (c) 2010-2013 The SquirrelMail Project Team
 ** Copyright (c) 2002-2010 Dave McMurtrie
 **
 ** Licensed under the GNU GPL. For full terms see the file COPYING.
@@ -23,7 +23,7 @@
 **
 **  Version:
 **
-**      $Id$
+**      $Id: main.c 14387 2013-07-26 17:31:02Z jervfors $
 **
 **  Modification History:
 **
@@ -187,9 +187,9 @@
 */
 
 
-static char *sourceRevision = "$Revision$";
-static char *sourceVersion = "$Id$";
-static char *sourceAuthor = "$Author$";
+static char *sourceRevision = "$Revision: 14387 $";
+static char *sourceVersion = "$Id: main.c 14387 2013-07-26 17:31:02Z jervfors $";
+static char *sourceAuthor = "$Author: jervfors $";
 
 #define _REENTRANT
 

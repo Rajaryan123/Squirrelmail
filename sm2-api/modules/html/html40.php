@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Th Squirrelmail Foundation
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: html40.php 1563 2001-10-11 12:30:24Z philippe_mingo $
  */
 
 /**

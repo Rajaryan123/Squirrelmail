@@ -11,7 +11,7 @@
  * Debug implementation.
  * Lightly modified from original Foowd implementation.
  *
- * $Id$
+ * $Id: smdoc.env.debug.php 7340 2004-05-01 19:55:48Z ebullient $
  * @package smdoc
  */
 

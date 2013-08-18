@@ -1,9 +1,9 @@
 <?php
 /**
  * decode/cp10006.php
- * $Id$
+ * $Id: cp10006.php 14387 2013-07-26 17:31:02Z jervfors $
  *
- * Copyright (c) 2003-2012 The SquirrelMail Project Team
+ * Copyright (c) 2003-2013 The SquirrelMail Project Team
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
  * This file contains cp10006 (MacGreek) decoding function that 

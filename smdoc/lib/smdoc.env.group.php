@@ -10,7 +10,7 @@
 /** 
  * Singleton Group Manager.
  * 
- * $Id$
+ * $Id: smdoc.env.group.php 7698 2004-06-28 21:53:57Z ebullient $
  * @package smdoc
  * @subpackage group
  */

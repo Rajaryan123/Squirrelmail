@@ -1,9 +1,9 @@
 # German (de_DE) local_autorespond_forward Translation (SquirrelMail plugin)
-# Copyright (c) 2005-2012 The SquirrelMail Project Team
+# Copyright (c) 2005-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Thomas Fruend <fruend@fhos.de>, 2005.
 # Jan Büren <jb@weitan.org>, 2008.
-# $Id: local_autorespond_forward.pot 12740 2007-10-24 21:31:21Z jervfors $
+# $Id: local_autorespond_forward.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: local_autorespond_forward 3.0\n"

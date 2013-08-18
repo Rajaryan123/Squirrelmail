@@ -9,7 +9,7 @@
  * Include it using:   include_once('common_header.php');
  * Will include all headers through the body tag.
  *
- * $Id$
+ * $Id: common_header.inc 4208 2002-12-04 19:44:27Z ebullient $
  */
 global $sm_doc_title, $sm_doc_orig_author, 
        $sm_doc_editor, $sm_doc_revision, $sm_doc_date;

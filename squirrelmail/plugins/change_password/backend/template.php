@@ -10,9 +10,9 @@
  *
  * Replace the word template everywhere with a name for your backend.
  *
- * @copyright 2003-2012 The SquirrelMail Project Team
+ * @copyright 2003-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: template.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage change_password
  */

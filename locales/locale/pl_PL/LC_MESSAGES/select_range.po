@@ -1,8 +1,8 @@
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # Kurt Yoder <freespirit74@yahoo.com>, 2003
 msgid ""
 msgstr ""
-"Project-Id-Version: $Id$\n"
+"Project-Id-Version: $Id: select_range.po 14387 2013-07-26 17:31:02Z jervfors $\n"
 "POT-Creation-Date: 2004-03-17 09:47+0600\n"
 "PO-Revision-Date: 2004-03-17 09:47+0600\n"
 "Last-Translator: Martin Saini\n"

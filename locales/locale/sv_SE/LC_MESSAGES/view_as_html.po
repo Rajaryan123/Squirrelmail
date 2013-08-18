@@ -1,9 +1,9 @@
 # Swedish (sv_SE) view_as_html Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Fredrik Nilsson <fnen@pc.nu> 2003-2009.
 # Fredrik Jervfors <jervfors@squirrelmail.org>, 2004-2009.
-# $Id$
+# $Id: view_as_html.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: view_as_html 3.5\n"

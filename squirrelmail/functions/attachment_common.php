@@ -5,9 +5,9 @@
  *
  * This file provides the handling of often-used attachment types.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: attachment_common.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @todo document attachment $type hook arguments
  */
@@ -147,7 +147,7 @@ function attachment_common_link_text(&$Args) {
        $Args[0]['attachment_common']['href'] = Where it links to */
     sqgetGlobalVar('QUERY_STRING', $QUERY_STRING, SQ_SERVER);
 
-    // if htmlspecialchars() breaks something - find other way to encode & in url.
+    // if sm_encode_html_special_chars() breaks something - find other way to encode & in url.
     $Args[0]['attachment_common']['href'] = $base_uri  . 'src/view_text.php?'. $QUERY_STRING;
     $Args[0]['attachment_common']['href'] =
           set_url_var($Args[0]['attachment_common']['href'],

@@ -1,8 +1,8 @@
 # translation of web_search.po to Nynorsk
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
-# Copyright (C) The SquirrelMail Project Team, 2006.
 # Ola Ketil Siqveland <olaketil@hotmail.com>, 2006.
-# $Id$
+# $Id: web_search.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: web_search 0.1.6\n"

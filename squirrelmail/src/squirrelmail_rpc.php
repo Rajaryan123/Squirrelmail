@@ -13,9 +13,9 @@
   * changed by creating a different RPC template set and pointing to it
   * with $rpc_templateset in the main SquirrelMail configuration file.
   * 
-  * @copyright 1999-2012 The SquirrelMail Project Team
+  * @copyright 1999-2013 The SquirrelMail Project Team
   * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-  * @version $Id$
+  * @version $Id: squirrelmail_rpc.php 14387 2013-07-26 17:31:02Z jervfors $
   * @package squirrelmail
   * @since 1.5.2
   *

@@ -3,9 +3,9 @@
 /**
  * options.php - Change Password HTML page
  *
- * @copyright 2004-2012 The SquirrelMail Project Team
+ * @copyright 2004-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: options.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage change_password
  */
@@ -56,7 +56,7 @@ if(sqgetGlobalVar('cpw_go', $cpw_go, SQ_POST)) {
 
     // security check
     sqgetGlobalVar('smtoken', $submitted_token, SQ_POST, '');
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     /* perform basic checks */
     $Messages = cpw_check_input();
@@ -81,7 +81,7 @@ do_hook('change_password_init', $null);
 if (isset($Messages) && count($Messages) > 0) {
     echo "<tr><td>\n";
     foreach ($Messages as $line) {
-        echo htmlspecialchars($line) . "<br />\n";
+        echo sm_encode_html_special_chars($line) . "<br />\n";
     }
     echo "</td></tr>\n";
 }

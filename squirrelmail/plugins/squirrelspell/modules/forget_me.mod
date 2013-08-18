@@ -10,9 +10,9 @@
  *
  *
  * @author Konstantin Riabitsev <icon at duke.edu>
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: forget_me.mod 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage squirrelspell
  */
@@ -40,7 +40,7 @@ if (! empty($words_ary)){
 
   // print list of deleted words
   foreach ($words_ary as $deleted_word) {
-    $msg.= '<li>'.htmlspecialchars($deleted_word)."</li>\n";
+    $msg.= '<li>'.sm_encode_html_special_chars($deleted_word)."</li>\n";
   }
 
   // rebuild dictionary

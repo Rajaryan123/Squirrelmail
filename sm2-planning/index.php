@@ -6,12 +6,12 @@
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
  *
- * $Id$
+ * $Id: index.php 4724 2003-04-04 04:58:06Z ebullient $
  */
 include_once('common_header.inc');
 set_title('Document Index');
 /* set_original_author('ebullient'); */
-/* set_attributes('$Author$','$Revision$','$Date$'); */
+/* set_attributes('$Author: ebullient $','$Revision: 4724 $','$Date: 2003-04-04 06:58:06 +0200 (vie 04 de abr de 2003) $'); */
 print_header();
 
 function print_links() {

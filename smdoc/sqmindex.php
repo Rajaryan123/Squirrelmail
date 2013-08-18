@@ -10,7 +10,7 @@
 /**
  * Alternate entry point providing a site index.
  *
- * $Id$
+ * $Id: sqmindex.php 9183 2005-04-03 21:08:59Z ebullient $
  *
  * Selective index of site content, alphabetized by title, 
  * then class, then version.

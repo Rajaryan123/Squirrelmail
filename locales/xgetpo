@@ -16,7 +16,7 @@ SM_LOCALES_PATH=/var/www/html/sm_cvs/locales
 # Philipe Mingo <mingo@rotedic.com>
 # Tomas Kuliavas <tokul@users.sourceforge.net>
 #
-#  $Id$
+#  $Id: xgetpo 14286 2012-03-13 23:13:46Z pdontthink $
 
 message="You must set SM_STABLE_PATH; SM_DEVEL_PATH and SM_LOCALES_PATH before running this script"
 

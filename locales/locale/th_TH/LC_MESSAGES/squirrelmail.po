@@ -1,10 +1,10 @@
 # Thai SquirrelMail Translation
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # Nartpong Ampornaramveth <webmaster@pramool.com>, 2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: $Id$\n"
+"Project-Id-Version: $Id: squirrelmail.po 14387 2013-07-26 17:31:02Z jervfors $\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-04-16 19:47+0200\n"
 "PO-Revision-Date: 2001-12-24 15:02+0700\n"

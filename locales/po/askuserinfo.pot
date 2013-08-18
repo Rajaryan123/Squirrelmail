@@ -1,8 +1,8 @@
 # LANGUAGE (xx_XX) askuserinfo Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# $Id$
+# $Id: askuserinfo.pot 14387 2013-07-26 17:31:02Z jervfors $
 #, fuzzy
 msgid ""
 msgstr ""

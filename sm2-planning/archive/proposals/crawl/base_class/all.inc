@@ -1,8 +1,8 @@
 <?php
 /*
- *  $Id$
- *  $Author$
- *  $Date$
+ *  $Id: all.inc 4113 2002-11-06 04:17:06Z sizzlingmercury $
+ *  $Author: sizzlingmercury $
+ *  $Date: 2002-11-06 05:17:06 +0100 (mié 06 de nov de 2002) $
  *
  *  all.inc
  *  This file would basically just be to include the core libs

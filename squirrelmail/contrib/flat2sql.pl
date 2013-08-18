@@ -8,11 +8,11 @@
 # using this script.
 #
 # Copyright (c) 2002, Michael Blandford and Tal Yardeni
-# Copyright (c) 2005-2012 The SquirrelMail Project Team
+# Copyright (c) 2005-2013 The SquirrelMail Project Team
 #
 # This script is licensed under the GNU Public License (GPL).
 # See: http://opensource.org/licenses/gpl-license.php
-# $Id$
+# $Id: flat2sql.pl 14387 2013-07-26 17:31:02Z jervfors $
 #
 
 ##### Default values #####

@@ -8,7 +8,7 @@
  *
  * Contains functions used to do authentication.
  *
- * $Id$
+ * $Id: auth.php 5057 2003-06-15 16:55:40Z stekkel $
  */
 
 /* Put in a safety net here, in case a naughty admin didn't run conf.pl when they upgraded */

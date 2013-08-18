@@ -1,8 +1,8 @@
 # Vietnamese (vi_VI) show_user_and_ip Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Clytie Siddall <clytie@riverland.net.au>, 2008.
-# $Id: show_user_and_ip.pot 12158 2007-01-20 06:49:49Z jervfors $
+# $Id: show_user_and_ip.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: show_user_and_ip 3.3\n"

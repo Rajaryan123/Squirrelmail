@@ -10,9 +10,9 @@
  *    - Send mail
  *    - Save As Draft
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: compose.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -415,7 +415,7 @@ if ($draft) {
 
     // validate security token
     //
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     /*
      * Set $default_charset to correspond with the user's selection
@@ -474,7 +474,7 @@ if ($send) {
 
     // validate security token
     //
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     if (isset($_FILES['attachfile']) &&
             $_FILES['attachfile']['tmp_name'] &&
@@ -601,7 +601,7 @@ if ($send) {
 
     // validate security token
     //
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     if ($compose_new_win == '1') {
         compose_Header($color, $mailbox);
@@ -650,7 +650,7 @@ if ($send) {
 
     // validate security token
     //
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     if ($compose_new_win == '1') {
         compose_Header($color, $mailbox);
@@ -666,7 +666,7 @@ elseif (isset($sigappend)) {
 
     // validate security token
     //
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     $signature = $idents[$identity]['signature'];
 
@@ -681,7 +681,7 @@ elseif (isset($sigappend)) {
 
     // validate security token
     //
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     if ($compose_new_win == '1') {
         compose_Header($color, $mailbox);
@@ -776,7 +776,7 @@ function newMail ($mailbox='', $passed_id='', $passed_ent_id='', $action='', $se
         $key, $imapServerAddress, $imapPort, 
         $composeMessage, $body_quote, $request_mdn, $request_dr,
         $mdn_user_support, $languages, $squirrelmail_language,
-        $default_charset;
+        $default_charset, $do_not_reply_to_self;
 
     /*
      * Set $default_charset to correspond with the user's selection
@@ -884,16 +884,11 @@ function newMail ($mailbox='', $passed_id='', $passed_ent_id='', $action='', $se
         if (count($idents) > 1) {
             foreach($idents as $nr=>$data) {
                 $enc_from_name = '"'.$data['full_name'].'" <'. $data['email_address'].'>';
-                if(strtolower($enc_from_name) == strtolower($orig_from)) {
-                    $identity = $nr;
-                    // don't stop!  need to build $identities array for idents match below
-                    //break;
-                }
                 $identities[] = $enc_from_name;
             }
 
             $identity_match = $orig_header->findAddress($identities);
-            if ($identity_match) {
+            if ($identity_match !== FALSE) {
                 $identity = $identity_match;
             }
         }
@@ -980,6 +975,80 @@ function newMail ($mailbox='', $passed_id='', $passed_ent_id='', $action='', $se
                 }
                 $send_to = decodeHeader($send_to,false,false,true);
                 $send_to = str_replace('""', '"', $send_to);
+
+
+                // If user doesn't want replies to her own messages
+                // going back to herself (instead send again to the
+                // original recipient of the message being replied to),
+                // then iterate through identities, checking if the TO
+                // field is one of them (if the reply is to ourselves)
+                //
+                // Note we don't bother if the original message doesn't
+                // have anything in the TO field itself (because that's
+                // what we use if we change the recipient to be that of
+                // the previous message)
+                //
+                if ($do_not_reply_to_self && !empty($orig_header->to)) {
+
+                    $orig_to = '';
+
+                    foreach($idents as $id) {
+
+                        if (!empty($id['email_address'])
+                         && strpos($send_to, $id['email_address']) !== FALSE) {
+
+                            // if this is a reply-all, the original recipient
+                            // is already in the CC field, so we can just blank
+                            // the recipient (TO field) (as long as the CC field
+                            // isn't empty that is) and we're done
+                            //
+                            if ($action == 'reply_all' && !empty($send_to_cc)) {
+                                $send_to = '';
+                                break;
+                            }
+
+                            $orig_to = $orig_header->to;
+                            if (is_array($orig_to) && count($orig_to)) {
+                                $orig_to = $orig_header->getAddr_s('to', ',', FALSE, TRUE);
+                            } else if (is_object($orig_to)) { /* unneccesarry, just for failsafe purpose */
+                                $orig_to = $orig_header->getAddr_s('to', ',', FALSE, TRUE);
+                            } else {
+                                $orig_to = '';
+                            }
+                            $orig_to = decodeHeader($orig_to,false,false,true);
+                            $orig_to = str_replace('""', '"', $orig_to);
+
+                            break;
+                        }
+                    }
+
+                    // if the reply was addressed back to ourselves,
+                    // we will send it to the TO of the previous message
+                    //
+                    if (!empty($orig_to)) {
+
+                        $send_to = $orig_to;
+
+                        // in this case, we also want to reset the FROM
+                        // identity as well (it should match the original
+                        // *FROM* header instead of TO or CC)
+                        //
+                        if (count($idents) > 1) {
+                            $identity = '';
+                            foreach($idents as $i => $id) {
+                                if (!empty($id['email_address'])
+                                 && strpos($orig_from, $id['email_address']) !== FALSE) {
+                                    $identity = $i;
+                                    break;
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+
                 $subject = decodeHeader($orig_header->subject,false,false,true);
                 $subject = str_replace('"', "'", $subject);
                 $subject = trim($subject);
@@ -1274,10 +1343,10 @@ function showInputForm ($session, $values=false) {
     $oTemplate->assign('identity_def', $identity);
     $oTemplate->assign('input_onfocus', 'onfocus="'.join(' ', $onfocus_array).'"');
 
-    $oTemplate->assign('to', htmlspecialchars($send_to));
-    $oTemplate->assign('cc', htmlspecialchars($send_to_cc));
-    $oTemplate->assign('bcc', htmlspecialchars($send_to_bcc));
-    $oTemplate->assign('subject', htmlspecialchars($subject));
+    $oTemplate->assign('to', sm_encode_html_special_chars($send_to));
+    $oTemplate->assign('cc', sm_encode_html_special_chars($send_to_cc));
+    $oTemplate->assign('bcc', sm_encode_html_special_chars($send_to_bcc));
+    $oTemplate->assign('subject', sm_encode_html_special_chars($subject));
 
     // access keys...
     //
@@ -1313,9 +1382,9 @@ function showInputForm ($session, $values=false) {
             } else {
                 $body_str = "\n\n".($prefix_sig==true? "-- \n":'').decodeHeader($signature,false,false);
             }
-            $body_str .= "\n\n".htmlspecialchars(decodeHeader($body,false,false));
+            $body_str .= "\n\n".sm_encode_html_special_chars(decodeHeader($body,false,false));
         } else {
-            $body_str = "\n\n".htmlspecialchars(decodeHeader($body,false,false));
+            $body_str = "\n\n".sm_encode_html_special_chars(decodeHeader($body,false,false));
             // FIXME: test is specific to ja_JP translation implementation. See above comments.
             if ($default_charset == 'iso-2022-jp') {
                 $body_str .= "\n\n".($prefix_sig==true? "-- \n":'').mb_convert_encoding($signature, 'EUC-JP');
@@ -1324,7 +1393,7 @@ function showInputForm ($session, $values=false) {
             }
         }
     } else {
-        $body_str = htmlspecialchars(decodeHeader($body,false,false));
+        $body_str = sm_encode_html_special_chars(decodeHeader($body,false,false));
     }
 
     $oTemplate->assign('editor_width', (int)$editor_size);
@@ -1739,7 +1808,7 @@ function deliverMessage(&$composeMessage, $draft=false) {
             $composeMessage->purgeAttachments();
             return $success;
         } else {
-            $msg  = '<br />'.sprintf(_("Error: Draft folder %s does not exist."), htmlspecialchars($draft_folder));
+            $msg  = '<br />'.sprintf(_("Error: Draft folder %s does not exist."), sm_encode_html_special_chars($draft_folder));
             plain_error_message($msg);
             return false;
         }
@@ -1760,7 +1829,7 @@ function deliverMessage(&$composeMessage, $draft=false) {
             $msg .= '<br />'
                   . _("Server replied:") . ' '
                   . (isset($deliver->dlv_ret_nr) ? $deliver->dlv_ret_nr . ' ' : '')
-                  . nl2br(htmlspecialchars($deliver->dlv_server_msg));
+                  . nl2br(sm_encode_html_special_chars($deliver->dlv_server_msg));
         }
         plain_error_message($msg);
     } else {

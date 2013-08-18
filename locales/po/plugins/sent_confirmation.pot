@@ -1,8 +1,8 @@
 # LANGUAGE (xx_XX) SquirrelMail sent_confirmation Plugin Translation
-# Copyright (c) 1999-2012 The Squirrelmail Project Team
+# Copyright (c) 1999-2013 The Squirrelmail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# $Id$
+# $Id: sent_confirmation.pot 14387 2013-07-26 17:31:02Z jervfors $
 #, fuzzy
 msgid ""
 msgstr ""

@@ -5,9 +5,9 @@
  *
  * Displays message highlighting options
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: options_highlight.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage prefs
  */
@@ -55,7 +55,7 @@ if (isset($theid) && ($action == 'delete') ||
                      ($action == 'down')) {
 
     // security check
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     $new_rules = array();
     switch($action) {
@@ -92,7 +92,7 @@ if (isset($theid) && ($action == 'delete') ||
 } else if ($action == 'save') {
 
     // security check
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     if ($color_type == 1) $newcolor = $newcolor_choose;
     elseif ($color_type == 2) $newcolor = $newcolor_input;
@@ -124,10 +124,10 @@ $rules = array();
 foreach($message_highlight_list as $index=>$rule) {
     $a = array();
     
-    $a['Name'] = htmlspecialchars($rule['name']);
+    $a['Name'] = sm_encode_html_special_chars($rule['name']);
     $a['Color'] = $rule['color'];
     $a['MatchField'] = '';
-    $a['MatchValue'] = htmlspecialchars($rule['value']);
+    $a['MatchValue'] = sm_encode_html_special_chars($rule['value']);
     switch ($rule['match_type']) {
             case 'from' :
                 $a['MatchField'] = _("From");

@@ -8,9 +8,9 @@
  * Subfolder search idea from Patch #806075 by Thomas Pohl xraven at users.sourceforge.net. Thanks Thomas!
  *
  * @author Alex Lemaresquier - Brainstorm <alex at brainstorm.fr>
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: search.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage search
  * @link http://www.ietf.org/rfc/rfc3501.txt
@@ -580,7 +580,7 @@ function asearch_get_query_display(&$color, &$mailbox_array, &$biop_array, &$uno
                 $cur_mailbox = 'INBOX';
             $biop = asearch_nz($biop_array[$crit_num]);
             if (($query_display == '') || ($cur_mailbox != $last_mailbox)) {
-                $mailbox_display = ' <span class="mailbox">' . htmlspecialchars(asearch_get_mailbox_display($cur_mailbox)) . '</span>';
+                $mailbox_display = ' <span class="mailbox">' . sm_encode_html_special_chars(asearch_get_mailbox_display($cur_mailbox)) . '</span>';
                 if ($query_display == '')
                     $biop_display = _("In");
                 else
@@ -606,7 +606,7 @@ function asearch_get_query_display(&$color, &$mailbox_array, &$biop_array, &$uno
                     if ($what_type == 'adate')
                         $what_display = asearch_get_date_display($what);
                     else
-                        $what_display = htmlspecialchars($what);
+                        $what_display = sm_encode_html_special_chars($what);
                     $what_display = ' <span class="value">' . $what_display . '</span>';
                 }
             }
@@ -782,7 +782,7 @@ function asearch_print_form($imapConnection, &$boxes, $mailbox_array, $biop_arra
     # Build the mailbox array
     $a = array();
     if (($mailbox != 'All Folders') && (!asearch_mailbox_exists($mailbox, $boxes))) {
-        $a[$mailbox] = '[' . _("Missing") . '] ' . htmlspecialchars(asearch_get_mailbox_display($mailbox));
+        $a[$mailbox] = '[' . _("Missing") . '] ' . sm_encode_html_special_chars(asearch_get_mailbox_display($mailbox));
     }
     $a['All Folders'] = '[' . asearch_get_mailbox_display('All Folders') . ']';
     $a = array_merge($a, sqimap_mailbox_option_array($imapConnection, 0, $boxes, NULL));
@@ -841,7 +841,7 @@ function asearch_print_form_basic($imapConnection, &$boxes, $mailbox_array, $bio
     # Build the mailbox array
     $a = array();
     if (($mailbox != 'All Folders') && (!asearch_mailbox_exists($mailbox, $boxes))) {
-        $a[$mailbox] = '[' . _("Missing") . '] ' . htmlspecialchars(asearch_get_mailbox_display($mailbox));
+        $a[$mailbox] = '[' . _("Missing") . '] ' . sm_encode_html_special_chars(asearch_get_mailbox_display($mailbox));
     }
     $a['All Folders'] = '[' . asearch_get_mailbox_display('All Folders') . ']';
     $a = array_merge($a, sqimap_mailbox_option_array($imapConnection, 0, $boxes, NULL));
@@ -862,7 +862,7 @@ function asearch_print_form_basic($imapConnection, &$boxes, $mailbox_array, $bio
     $oTemplate->assign('unary_options', $imap_asearch_unops);
     $oTemplate->assign('where_options', $imap_asearch_options);
     
-    $oTemplate->assign('mailbox_sel', strtolower(htmlspecialchars($mailbox)));
+    $oTemplate->assign('mailbox_sel', strtolower(sm_encode_html_special_chars($mailbox)));
     $oTemplate->assign('unary_sel', $unop);
     $oTemplate->assign('where_sel', $where);
     $oTemplate->assign('what_val', $what);
@@ -1184,7 +1184,7 @@ if (!isset($submit)) {
 } else {
 
     // first validate security token
-    sm_validate_security_token($submitted_token, 3600, TRUE);
+    sm_validate_security_token($submitted_token, -1, TRUE);
 
     switch ($submit) {
       case $search_button_text:
@@ -1618,7 +1618,7 @@ if ($submit == $search_button_text) {
                             $mailbox_display = imap_utf7_decode_local($mbx);
                         }
 
-                        $oTemplate->assign('mailbox_name', htmlspecialchars($mailbox_display));
+                        $oTemplate->assign('mailbox_name', sm_encode_html_special_chars($mailbox_display));
                         $oTemplate->display('search_result_mailbox.tpl');
 
                         $oTemplate->assign('page_selector',  $page_selector);

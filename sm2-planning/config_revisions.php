@@ -5,12 +5,12 @@
  * Copyright (c) 1999-2002 The SquirrelMail development team
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: config_revisions.php 4342 2002-12-31 20:16:46Z ebullient $
  */
 include_once('common_header.inc');
 set_title('Config Revisions');
 set_original_author('ebullient, grootkoerkamp');
-set_attributes('$Author$','$Revision$','$Date$');
+set_attributes('$Author: ebullient $','$Revision: 4342 $','$Date: 2002-12-31 21:16:46 +0100 (mar 31 de dic de 2002) $');
 print_header();
 
 function print_links() {

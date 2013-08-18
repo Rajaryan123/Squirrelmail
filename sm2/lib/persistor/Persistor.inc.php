@@ -8,7 +8,7 @@
  *
  * Persistor class.
  *
- * $Id$
+ * $Id: Persistor.inc.php 5253 2003-07-09 16:11:41Z jangliss $
  */
 
  /*

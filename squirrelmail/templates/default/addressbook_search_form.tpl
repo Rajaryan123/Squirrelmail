@@ -8,9 +8,9 @@
  *      $use_js   - boolean TRUE if we should use Javascript in the address book
  *      $backends - array containing list of all available backends.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: addressbook_search_form.tpl 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage templates
  */
@@ -47,7 +47,7 @@ extract($t);
    <select name="backend" id="backend">
         <?php
         foreach ($backends as $id=>$name) {
-            echo '<option value="'.$id.'">'.htmlspecialchars($name).'</option>'."\n";
+            echo '<option value="'.$id.'">'.sm_encode_html_special_chars($name).'</option>'."\n";
         }
         ?>
    </select>

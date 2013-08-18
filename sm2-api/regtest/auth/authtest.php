@@ -14,7 +14,7 @@
 
 $time_ini = time();     // Let's do some performance test
 
-$authtest_version = '$Id$';
+$authtest_version = '$Id: authtest.php 2449 2002-02-15 05:19:06Z philippe_mingo $';
 $zkhome = '../../../sm2-api';
 
 /* Set the test username and password. */

@@ -8,7 +8,7 @@
  *
  * Access Control List class.
  *
- * $Id$
+ * $Id: acl.class.php 6025 2003-10-27 00:13:58Z stekkel $
  */
 
  /* 

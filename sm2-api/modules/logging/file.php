@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Paul Joseph Thompson
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: file.php 1494 2001-09-08 02:10:03Z thomppj $
  */
  
  /**

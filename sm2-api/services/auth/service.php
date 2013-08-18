@@ -5,7 +5,7 @@
  * Copyright (c) 2001-2002 The Zookeeper Project Team
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: service.php 2756 2002-04-25 04:52:32Z jtai $
  */
 
 /**
@@ -17,7 +17,7 @@ class ZkSvc_auth {
 
     /* Constants */
     var $name = 'auth';
-    var $ver = '$Id$';
+    var $ver = '$Id: service.php 2756 2002-04-25 04:52:32Z jtai $';
 
     /* Properties */
     var $mod;        /* obj  - authentication module for this service */

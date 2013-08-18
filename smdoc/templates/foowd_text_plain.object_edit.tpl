@@ -11,7 +11,7 @@
  * Template for editing text-based pages
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: foowd_text_plain.object_edit.tpl 7888 2004-08-12 01:51:36Z ebullient $
  * 
  * @package smdoc
  * @subpackage template

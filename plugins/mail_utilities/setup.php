@@ -9,7 +9,7 @@
    ** so we don't have too many links in the menu.
    **
    ** See the README file for details.
-   ** $Id$
+   ** $Id: setup.php 4477 2003-01-27 17:51:54Z ebullient $
    **/
 
 

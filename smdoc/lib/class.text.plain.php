@@ -23,7 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * Base class for creation/storage/manipulation of documents.
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: class.text.plain.php 8557 2005-01-02 07:41:14Z ebullient $
  * 
  * @package smdoc
  * @subpackage Foowd

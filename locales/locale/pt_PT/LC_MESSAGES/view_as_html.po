@@ -1,10 +1,10 @@
 # Portuguese (pt_PT) view_as_html translation.
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
 # Ruben Leote Mendes <ruben@nocturno.org>, 2003.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: $Id$\n"
+"Project-Id-Version: $Id: view_as_html.po 14387 2013-07-26 17:31:02Z jervfors $\n"
 "POT-Creation-Date: 2002-11-01 12:33-0700\n"
 "PO-Revision-Date: 2003-10-03 04:00+0100\n"
 "Last-Translator: Ruben Leote Mendes <ruben@nocturno.org>\n"

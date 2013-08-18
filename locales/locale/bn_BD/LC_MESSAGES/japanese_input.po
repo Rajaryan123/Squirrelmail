@@ -1,8 +1,8 @@
 # Bengali (bn_BD) japanese_input Translation (SquirrelMail plugin)
-# Copyright (c) 2004-2012 The SquirrelMail Project Team
+# Copyright (c) 2004-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Israt Jahan <israt@ankur.org.bd>, 2009.
-# $Id: japanese_input.pot 12743 2007-10-27 11:27:09Z jervfors $
+# $Id: japanese_input.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: japanese_input 1.1\n"

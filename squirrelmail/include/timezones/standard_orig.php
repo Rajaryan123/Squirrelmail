@@ -6,9 +6,9 @@
  * locale/timezones.cfg file converted to array. DON'T modify $aTimeZones 
  * array stored in this file. It is used for backward compatibility testing.
  *
- * @copyright 2005-2012 The SquirrelMail Project Team
+ * @copyright 2005-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: standard_orig.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage timezones
  */

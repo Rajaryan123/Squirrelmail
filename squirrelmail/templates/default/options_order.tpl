@@ -17,9 +17,9 @@
  *      $move_down      - URL foundation to move a field down in the ordering
  *      $remove         - URL foundation to remove a field from the ordering.
  * 
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: options_order.tpl 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage templates
  */
@@ -71,7 +71,7 @@ extract($t);
    <select name="num">
     <?php
         foreach ($not_used as $field_id=>$name) {
-            echo '<option value="'.$field_id.'">'.htmlspecialchars($name).'</option>'."\n";
+            echo '<option value="'.$field_id.'">'.sm_encode_html_special_chars($name).'</option>'."\n";
         }
     ?>
    </select>

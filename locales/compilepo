@@ -9,7 +9,7 @@
 # ** Philipe Mingo <mingo@rotedic.com>
 # ** Konstantin Riabitsev <icon@duke.edu>
 # **
-# **  $Id$
+# **  $Id: compilepo 9910 2005-08-06 03:42:23Z tokul $
 
 if [ -z "$1" ]; then
  echo "USAGE: compilepo [localename]"

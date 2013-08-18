@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Th Squirrelmail Foundation
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: service.php 1569 2001-10-17 04:19:34Z thomppj $
  */
 
 /**

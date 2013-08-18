@@ -1,7 +1,7 @@
 <?php
 
 ////////////////////////////////////////////////////////////////////////////
-// $Id$
+// $Id: html-functions.php 8868 2005-02-17 14:26:14Z tokul $
 //
 // Description: common functions for GUI messages statistic program
 //

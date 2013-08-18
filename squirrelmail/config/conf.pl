@@ -1,12 +1,12 @@
 #!/usr/bin/env perl
 # conf.pl
 #
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # Licensed under the GNU GPL. For full terms see COPYING.
 #
 # A simple configure script to configure SquirrelMail
 #
-# $Id$
+# $Id: conf.pl 14387 2013-07-26 17:31:02Z jervfors $
 ############################################################
 $conf_pl_version = "1.5.0";
 
@@ -4110,7 +4110,7 @@ sub command91 {
     print "[$WHT$addrbook_dsn$NRM]: $WHT";
     $new_dsn = <STDIN>;
     if ( $new_dsn eq "\n" ) {
-        $new_dsn = "";
+        $new_dsn = $addrbook_dsn;
     } else {
         $new_dsn =~ s/[\r\n]//g;
         $new_dsn =~ s/^\s+$//g;
@@ -4152,7 +4152,7 @@ sub command93 {
     print "[$WHT$prefs_dsn$NRM]: $WHT";
     $new_dsn = <STDIN>;
     if ( $new_dsn eq "\n" ) {
-        $new_dsn = "";
+        $new_dsn = $prefs_dsn;
     } else {
         $new_dsn =~ s/[\r\n]//g;
         $new_dsn =~ s/^\s+$//g;
@@ -4255,7 +4255,7 @@ sub command98 {
     print "[$WHT$addrbook_global_dsn$NRM]: $WHT";
     $new_dsn = <STDIN>;
     if ( $new_dsn eq "\n" ) {
-        $new_dsn = "";
+        $new_dsn = $addrbook_global_dsn;
     } else {
         $new_dsn =~ s/[\r\n]//g;
         $new_dsn =~ s/^\s+$//g;
@@ -4641,12 +4641,12 @@ sub commandB8 {
         print "1     " . ($sm_debug_mode & 1 ? "y" : " ")
             . "      Simple debugging (PHP E_ERROR)\n";
         print "2     " . ($sm_debug_mode & 512 ? "y" : " ")
-            . "      Moderate debugging (PHP E_ALL)\n";
+            . "      Moderate debugging (PHP E_ALL without E_STRICT)\n";
         print "3     " . ($sm_debug_mode & 524288 ? "y" : " ")
-            . "      Advanced debugging (PHP E_ALL plus log errors\n";
-        print "             intentionally suppressed)\n";
+            . "      Advanced debugging (PHP E_ALL (without E_STRICT) plus\n";
+        print "             log errors intentionally suppressed)\n";
         print "4     " . ($sm_debug_mode & 536870912 ? "y" : " ")
-            . "      Strict debugging (PHP E_STRICT)\n";
+            . "      Strict debugging (PHP E_ALL and E_STRICT)\n";
         print "\n";
     
         print "SquirrelMail debug mode (0,1,2,3,4) or d when done? : $WHT";

@@ -7,7 +7,7 @@
  *
  * Contains functions the handle the imap backend
  *
- * $Id$
+ * $Id: imap_backend.class.php 6025 2003-10-27 00:13:58Z stekkel $
  */
 
 define('SM_MBXLIST_MBX',0);

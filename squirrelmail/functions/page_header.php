@@ -5,9 +5,9 @@
  *
  * Prints the page header (duh)
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: page_header.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -284,7 +284,7 @@ function displayPageHeader($color, $mailbox='', $sHeaderJs='', $sOnload = '') {
         * this explains the imap_mailbox.php dependency. We should instead store
         * the selected mailbox in the session and fallback to the session var.
         */
-        $shortBoxName = htmlspecialchars(imap_utf7_decode_local(
+        $shortBoxName = sm_encode_html_special_chars(imap_utf7_decode_local(
                     readShortMailboxName($mailbox, $delimiter)));
         if (getPref($data_dir, $username, 'translate_special_folders')) {
             global $sent_folder, $trash_folder, $draft_folder;

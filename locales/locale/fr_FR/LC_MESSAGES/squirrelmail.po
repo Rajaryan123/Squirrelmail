@@ -1,8 +1,8 @@
 # French SquirrelMail Translation
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # Antoine Hulin <antoine@origan.fdn.org>, 2002-2003
 # Alex Lemaresquier <alex@brainstorm.fr>, 2003-2005
-# $Id$
+# $Id: squirrelmail.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: squirrelmail\n"

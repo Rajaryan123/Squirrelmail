@@ -7,9 +7,9 @@
   * SquirrelMail and Smarty.  All abstract methods from the Template class
   * are implemented here.
   *
-  * @copyright 2003-2012 The SquirrelMail Project Team
+  * @copyright 2003-2013 The SquirrelMail Project Team
   * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-  * @version $Id$
+  * @version $Id: Smarty_Template.class.php 14387 2013-07-26 17:31:02Z jervfors $
   * @package squirrelmail
   * @subpackage Template
   * @since 1.5.2
@@ -84,7 +84,7 @@ class Smarty_Template extends Template
       * @param mixed $value the value to assign
 FIXME: Proposed idea to add a parameter here that turns variable
        encoding on, so that we can make sure output is always
-       run through something like htmlspecialchars() (maybe even nl2br()?)
+       run through something like sm_encode_html_special_chars() (maybe even nl2br()?)
       *
       */
     function assign($tpl_var, $value = NULL) {
@@ -100,7 +100,7 @@ FIXME: Proposed idea to add a parameter here that turns variable
       * @param mixed $value the referenced value to assign
 FIXME: Proposed idea to add a parameter here that turns variable
        encoding on, so that we can make sure output is always
-       run through something like htmlspecialchars() (maybe even nl2br()?)
+       run through something like sm_encode_html_special_chars() (maybe even nl2br()?)
       *
       */
     function assign_by_ref($tpl_var, &$value) {
@@ -152,7 +152,7 @@ FIXME: Proposed idea to add a parameter here that turns variable
       *                       variable values
 FIXME: Proposed idea to add a parameter here that turns variable
        encoding on, so that we can make sure output is always
-       run through something like htmlspecialchars() (maybe even nl2br()?)
+       run through something like sm_encode_html_special_chars() (maybe even nl2br()?)
       *
       */
     function append($tpl_var, $value = NULL, $merge = FALSE) {
@@ -175,7 +175,7 @@ FIXME: Proposed idea to add a parameter here that turns variable
       *                       variable values
 FIXME: Proposed idea to add a parameter here that turns variable
        encoding on, so that we can make sure output is always
-       run through something like htmlspecialchars() (maybe even nl2br()?)
+       run through something like sm_encode_html_special_chars() (maybe even nl2br()?)
       *
       */
     function append_by_ref($tpl_var, &$value, $merge = FALSE) {

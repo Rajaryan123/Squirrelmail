@@ -3,9 +3,9 @@
 /**
  * Change password LDAP backend
  *
- * @copyright 2005-2012 The SquirrelMail Project Team
+ * @copyright 2005-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: ldap.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage change_password
  */
@@ -646,7 +646,7 @@ function cpw_ldap_password_hash($pass,$crypto,&$msgs,$forced_salt='') {
         break;
     default:
         array_push($msgs,sprintf(_("Unsupported crypto: %s"),
-                                 (is_string($ldap_crypto) ? htmlspecialchars($ldap_crypto) : _("unknown"))));
+                                 (is_string($ldap_crypto) ? sm_encode_html_special_chars($ldap_crypto) : _("unknown"))));
     }
     return $ret;
 }

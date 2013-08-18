@@ -1,7 +1,7 @@
 # translation of preview_pane.po to Faroese
 # Copyright (C) 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# $Id$
+# $Id: preview_pane.po 10481 2005-12-20 07:42:50Z tokul $
 # Danial Olsen <danial@com-data.fo>, 2005.
 msgid ""
 msgstr ""

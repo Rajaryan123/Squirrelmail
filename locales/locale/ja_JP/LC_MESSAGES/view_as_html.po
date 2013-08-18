@@ -1,11 +1,11 @@
 # Japanese (ja_JP) view_as_html translation.
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
 # Kosaku Nagasaka <nagasaka@yamaguchi-u.ac.jp>
 #
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: $Id$\n"
+"Project-Id-Version: $Id: view_as_html.po 14387 2013-07-26 17:31:02Z jervfors $\n"
 "POT-Creation-Date: 2002-11-01 12:33-0700\n"
 "PO-Revision-Date: 2004-02-12 08:59-0700\n"
 "Last-Translator: Kosaku Nagasaka <nagasaka@yamaguchi-u.ac.jp>\n"

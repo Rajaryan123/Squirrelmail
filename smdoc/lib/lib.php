@@ -23,7 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * Basic functions commonly used throughout the framework.
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: lib.php 8756 2005-02-03 12:09:36Z tokul $
  * 
  * @package Foowd
  */

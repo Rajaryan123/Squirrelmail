@@ -9,7 +9,7 @@
    **  so we don't have too many links in the menu.
    **
    **  See the README file for details.
-   **  $Id$
+   **  $Id: config.php 3623 2002-09-09 03:38:29Z sizzlingmercury $
    **/
 
 $show_link_sample = 1;

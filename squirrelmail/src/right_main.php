@@ -6,9 +6,9 @@
  * This is where the mailboxes are listed. This controls most of what
  * goes on in SquirrelMail.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: right_main.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -319,7 +319,7 @@ if (isset($mail_sent) && $mail_sent == 'yes') {
     $note = _("Your mail has been sent.");
 }
 if (isset($note)) {
-    $oTemplate->assign('note', htmlspecialchars($note));
+    $oTemplate->assign('note', sm_encode_html_special_chars($note));
     $oTemplate->display('note.tpl');
 }
 

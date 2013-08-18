@@ -3,7 +3,7 @@
  * Definition of Anonymous user
  * 
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: class.anonuser.php 7698 2004-06-28 21:53:57Z ebullient $
  *
  * @package smdoc
  * @subpackage user

@@ -18,9 +18,9 @@
  * and inetOrgPerson (RFC2798) objects and dn, description, sn, givenname,
  * cn, mail attributes. Other attributes are ignored.
  * 
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: abook_ldap_server.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage addressbook
  */

@@ -11,7 +11,7 @@
  * Template for user object view
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: smdoc_user.object_view.tpl 8333 2004-11-05 23:54:18Z ebullient $
  * 
  * @package smdoc
  * @subpackage template

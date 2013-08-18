@@ -1,8 +1,8 @@
 # Norwegian Bokmal (nb_NO) show_user_and_ip Translation (SquirrelMail plugin)
-# Copyright (c) 2007-2012 The SquirrelMail Project Team
+# Copyright (c) 2007-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Hans Fredrik Nordhaug <hans@nordhaug.priv.no>, 2007.
-# $Id: show_user_and_ip.pot 12158 2007-01-20 06:49:49Z jervfors $
+# $Id: show_user_and_ip.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: show_user_and_ip 3.3\n"

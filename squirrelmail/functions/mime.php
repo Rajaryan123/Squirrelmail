@@ -6,9 +6,9 @@
  * This contains the functions necessary to detect and decode MIME
  * messages.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: mime.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -63,7 +63,7 @@ function mime_structure ($bodystructure, $flags=array()) {
         displayPageHeader( $color, $mailbox );
         $errormessage  = _("SquirrelMail could not decode the bodystructure of the message");
         $errormessage .= '<br />'._("The bodystructure provided by your IMAP server:").'<br /><br />';
-        $errormessage .= '<pre>' . htmlspecialchars($read) . '</pre>';
+        $errormessage .= '<pre>' . sm_encode_html_special_chars($read) . '</pre>';
         plain_error_message( $errormessage );
         echo '</body></html>';
         exit;
@@ -137,7 +137,13 @@ function mime_fetch_body($imap_stream, $id, $ent_id=1, $fetch_size=0) {
     $data = sqimap_run_command ($imap_stream, $cmd, true, $response, $message, TRUE);
     do {
         $topline = trim(array_shift($data));
-    } while($topline && ($topline[0] == '*') && !preg_match('/\* [0-9]+ FETCH.*/i', $topline)) ;
+    } while($topline && ($topline[0] == '*') && !preg_match('/\* [0-9]+ FETCH .*BODY.*/i', $topline)) ;
+    // Matching with "BODY" above is difficult: in most cases "FETCH \(BODY" would work
+    // but some servers may put other things in the same result, perhaps something such
+    // as "* 23 FETCH (FLAGS (\Seen) BODY[1] {174}".  There is some small chance that
+    // if the character sequence "BODY" appears in a response where it isn't actually
+    // a FETCH response data item name, the current regex will break things.  The better
+    // way to do this would be to parse the response correctly and not use a regex.
 
     $wholemessage = implode('', $data);
     if (preg_match('/\{([^\}]*)\}/', $topline, $regs)) {
@@ -626,7 +632,7 @@ function buildAttachmentArray($message, $exclude_id, $mailbox, $id) {
         $this_attachment['DownloadHREF'] = $links['download link']['href'];
         $this_attachment['ViewHREF'] = isset($links['attachment_common']) ? $links['attachment_common']['href'] : '';
         $this_attachment['Size'] = $header->size;
-        $this_attachment['ContentType'] = htmlspecialchars($type0 .'/'. $type1);
+        $this_attachment['ContentType'] = sm_encode_html_special_chars($type0 .'/'. $type1);
         $this_attachment['OtherLinks'] = array();
         foreach ($links as $val) {
             if ($val['text']==_("Download") || $val['text'] == _("View"))
@@ -800,6 +806,7 @@ function decodeHeader ($string, $utfencode=true,$htmlsafe=true,$decide=false) {
     $iLastMatch = -2;
     $encoded = true;
 
+// FIXME: spaces are allowed inside quoted-printable encoding, but the following line will bust up any such encoded strings
     $aString = explode(' ',$string);
     $ret = '';
     foreach ($aString as $chunk) {
@@ -825,7 +832,7 @@ function decodeHeader ($string, $utfencode=true,$htmlsafe=true,$decide=false) {
             $iLastMatch = $i;
             $j = $i;
             if ($htmlsafe) {
-                $ret .= htmlspecialchars($res[1]);
+                $ret .= sm_encode_html_special_chars($res[1]);
             } else {
                 $ret .= $res[1];
             }
@@ -854,14 +861,15 @@ function decodeHeader ($string, $utfencode=true,$htmlsafe=true,$decide=false) {
                         }
                     } else {
                         if ($htmlsafe) {
-                            $replace = htmlspecialchars($replace);
+                            $replace = sm_encode_html_special_chars($replace);
                         }
                         $ret.= $replace;
                     }
                     break;
                 case 'Q':
                     $replace = str_replace('_', ' ', $res[4]);
-                    $replace = preg_replace('/=([0-9a-f]{2})/ie', 'chr(hexdec("\1"))',
+                    $replace = preg_replace_callback('/=([0-9a-f]{2})/i',
+                            create_function ('$matches', 'return chr(hexdec($matches[1]));'),
                             $replace);
                     if ($utfencode) {
                         if ($can_be_encoded) {
@@ -875,7 +883,7 @@ function decodeHeader ($string, $utfencode=true,$htmlsafe=true,$decide=false) {
                         }
                     } else {
                         if ($htmlsafe) {
-                            $replace = htmlspecialchars($replace);
+                            $replace = sm_encode_html_special_chars($replace);
                         }
                     }
                     $ret .= $replace;
@@ -895,7 +903,7 @@ function decodeHeader ($string, $utfencode=true,$htmlsafe=true,$decide=false) {
         }
 
         if (!$encoded && $htmlsafe) {
-            $ret .= htmlspecialchars($chunk);
+            $ret .= sm_encode_html_special_chars($chunk);
         } else {
             $ret .= $chunk;
         }

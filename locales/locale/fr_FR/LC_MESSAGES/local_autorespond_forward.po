@@ -1,8 +1,8 @@
 # French (fr_FR) local_autorespond_forward Translation (SquirrelMail plugin)
-# Copyright (c) 2007-2012 The SquirrelMail Project Team
+# Copyright (c) 2007-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Nicolas P. M. Legrand <nicolas.legrand@obspm.fr>, 2011.
-# $Id:$
+# $Id: local_autorespond_forward.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: local_autorespond_forward 3.0.1\n"

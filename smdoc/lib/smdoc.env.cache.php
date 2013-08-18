@@ -10,7 +10,7 @@
 /**
  * Implementation of cache for objects retrieved from DB.
  * 
- * $Id$
+ * $Id: smdoc.env.cache.php 7700 2004-06-29 05:40:55Z ebullient $
  * 
  * @package smdoc
  * @subpackage db

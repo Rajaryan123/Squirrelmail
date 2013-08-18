@@ -7,7 +7,7 @@
  *
  * messages functions.
  * 
- * $Id$
+ * $Id: messages.class.php 5253 2003-07-09 16:11:41Z jangliss $
  */
  
  class Messages() extends Service {

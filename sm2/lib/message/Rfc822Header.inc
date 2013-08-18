@@ -8,7 +8,7 @@
  *
  * This contains functions needed to handle mime messages.
  *
- * $Id$
+ * $Id: Rfc822Header.inc 5026 2003-06-12 21:23:55Z stekkel $
  */
 
 /*

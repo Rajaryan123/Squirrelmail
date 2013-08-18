@@ -4,9 +4,9 @@
  *
  * Displays messagelist column order options
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: options_order.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage prefs
  */
@@ -31,7 +31,7 @@ if (sqgetGlobalVar('num',       $num,       SQ_GET)) {
 if (!sqgetGlobalVar('method', $method)) {
     $method = '';
 } else {
-    $method = htmlspecialchars($method);
+    $method = sm_encode_html_special_chars($method);
 }
 if (!sqgetGlobalVar('positions', $pos, SQ_GET)) {
     $pos = 0;

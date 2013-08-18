@@ -11,7 +11,7 @@
  * Generic entry-point for all of Foowd/smdoc
  *
  * Modified by SquirrelMail Development
- * $Id$
+ * $Id: index.php 9183 2005-04-03 21:08:59Z ebullient $
  * 
  * @package smdoc
  */

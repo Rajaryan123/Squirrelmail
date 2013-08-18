@@ -5,9 +5,9 @@
  *
  * Displays all options concerning composing of new messages
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: compose.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -117,6 +117,13 @@ function load_optpage_data_compose() {
     /*** Load the General Options into the array ***/
     $optgrps[SMOPT_GRP_COMPOSE_REPLY] = _("Replying and Forwarding Messages");
     $optvals[SMOPT_GRP_COMPOSE_REPLY] = array();
+
+    $optvals[SMOPT_GRP_COMPOSE_REPLY][] = array(
+        'name'    => 'do_not_reply_to_self',
+        'caption' => _("Send Replies To My Own Messages To Previous Recipient"),
+        'type'    => SMOPT_TYPE_BOOLEAN,
+        'refresh' => SMOPT_REFRESH_NONE
+    );
 
     $optvals[SMOPT_GRP_COMPOSE_REPLY][] = array(
         'name'    => 'include_self_reply_all',

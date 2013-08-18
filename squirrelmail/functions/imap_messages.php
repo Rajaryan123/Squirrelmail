@@ -6,9 +6,9 @@
  * This implements functions that manipulate messages
  * NOTE: Quite a few functions in this file are obsolete
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: imap_messages.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage imap
  */
@@ -622,7 +622,7 @@ function parseFetch(&$aResponse,$aMessageList = array()) {
         $aMsg['ID'] = $id;
         $fetch = substr($read,$i_space+1,5);
         if (!is_numeric($id) && $fetch !== 'FETCH') {
-            $aMsg['ERROR'] = $read; // htmlspecialchars should be done just before display. this is backend code
+            $aMsg['ERROR'] = $read; // sm_encode_html_special_chars should be done just before display. this is backend code
             break;
         }
         $i = strpos($read,'(',$i_space+5);

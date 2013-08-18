@@ -1,9 +1,9 @@
 # Swedish (sv_SE) SquirrelMail Translation
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Johan Fernberger <johan@fernberger.com>, 2002.
 # Fredrik Jervfors <jervfors@squirrelmail.org>, 2004-2009.
-# $Id$
+# $Id: squirrelmail.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: SquirrelMail HEAD\n"

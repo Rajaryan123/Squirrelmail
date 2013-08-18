@@ -1,6 +1,6 @@
 **********************************************
 IMAP AND SMTP AUTHENTICATION WITH SQUIRRELMAIL
-$Id$
+$Id: authentication.txt 11469 2006-08-05 07:38:01Z tokul $
 Chris Hilts tassium@squirrelmail.org
 **********************************************
 

@@ -10,7 +10,7 @@
 /** 
  * Manage input from form textboxes.
  *
- * $Id$
+ * $Id: input.textbox.php 8557 2005-01-02 07:41:14Z ebullient $
  *
  * @package smdoc
  * @subpackage input

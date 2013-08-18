@@ -8,9 +8,9 @@
  *       addrbook_search_html.html -- If you change one,
  *       change the other one too!
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: addrbook_search.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage addressbook
  */
@@ -70,7 +70,7 @@ set_my_charset();
 
 /* Empty search */
 if (empty($query) && empty($show) && !isset($listall)) {
-    $oTemplate->assign('note', htmlspecialchars(_("No persons matching your search were found")));
+    $oTemplate->assign('note', sm_encode_html_special_chars(_("No persons matching your search were found")));
     $oTemplate->display('note.tpl');
 #    exit;
 }
@@ -125,7 +125,7 @@ if ($show == 'form' && ! isset($listall)) {
         }
 
         if (!is_array($res)) {
-            plain_error_message( _("Your search failed with the following error(s)") .':<br />'. nl2br(htmlspecialchars($abook->error)) );
+            plain_error_message( _("Your search failed with the following error(s)") .':<br />'. nl2br(sm_encode_html_special_chars($abook->error)) );
         } elseif (sizeof($res) == 0) {
             $oTemplate->assign('note', _("No persons matching your search were found"));
             $oTemplate->display('note.tpl');

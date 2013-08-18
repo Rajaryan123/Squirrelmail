@@ -5,12 +5,12 @@
  * Copyright (c) 1999-2002 The SquirrelMail development team
  * Licensed under the GNU GPL. For full terms see the file COPYING.
  *
- * $Id$
+ * $Id: plugin_revisions.php 4785 2003-04-20 23:53:31Z pdontthink $
  */
 include_once('common_header.inc');
 set_title('Plugin Revisions');
 set_original_author('ebullient');
-set_attributes('$Author$','$Revision$','$Date$');
+set_attributes('$Author: pdontthink $','$Revision: 4785 $','$Date: 2003-04-21 01:53:31 +0200 (lun 21 de abr de 2003) $');
 print_header();
 ?>
 

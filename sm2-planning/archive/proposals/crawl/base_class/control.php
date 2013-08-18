@@ -1,8 +1,8 @@
 <?php
 /*
- *  $Id$
- *  $Author$
- *  $Date$
+ *  $Id: control.php 4113 2002-11-06 04:17:06Z sizzlingmercury $
+ *  $Author: sizzlingmercury $
+ *  $Date: 2002-11-06 05:17:06 +0100 (mié 06 de nov de 2002) $
  *
  *  An example of how a controller or 
  *  whatever might call the sq core libs

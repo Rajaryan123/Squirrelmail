@@ -5,9 +5,9 @@
  * This file contains shift_jis decoding function that is needed to read
  * shift_jis encoded mails in non-shift_jis locale.
  *
- * @copyright (c) 2005-2012 The SquirrelMail Project Team
+ * @copyright (c) 2005-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: shift_jis.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package decode
  * @subpackage eastasia
  */

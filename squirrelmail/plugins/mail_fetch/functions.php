@@ -9,9 +9,9 @@
  * and josh@superfork.com (extracted from php manual)
  * Adapted for MailFetch by Philippe Mingo <mingo@rotedic.com>
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: functions.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage mail_fetch
  */
@@ -139,7 +139,7 @@ function mail_fetch_login_function() {
 
             $aMsgStat = $pop3->command_stat();
             if (is_bool($aMsgStat)) {
-                $outMsg .= _("Can't get mailbox status:") . ' ' . htmlspecialchars($pop3->error);
+                $outMsg .= _("Can't get mailbox status:") . ' ' . sm_encode_html_special_chars($pop3->error);
                 continue;
             }
 
@@ -152,7 +152,7 @@ function mail_fetch_login_function() {
                 if ($mailfetch_lmos == 'on') {
                     $msglist = $pop3->command_uidl();
                     if (is_bool($msglist)) {
-                        $outMsg .= _("Server does not support UIDL.") . ' '.htmlspecialchars($pop3->error);
+                        $outMsg .= _("Server does not support UIDL.") . ' '.sm_encode_html_special_chars($pop3->error);
                         // User asked to leave messages on server, but we can't do that.
                         $pop3->command_quit();
                         continue;
@@ -191,7 +191,7 @@ function mail_fetch_login_function() {
                 $Message = $pop3->command_retr($i);
 
                 if (is_bool($Message)) {
-                    $outMsg .= _("Warning:") . ' ' . htmlspecialchars($pop3->error);
+                    $outMsg .= _("Warning:") . ' ' . sm_encode_html_special_chars($pop3->error);
                     continue;
                 }
 
@@ -212,7 +212,7 @@ function mail_fetch_login_function() {
                     $response=(implode('',$response));
                     $message=(implode('',$message));
                     if ($response != 'OK') {
-                        $outMsg .= _("Error Appending Message!")." ".htmlspecialchars($message);
+                        $outMsg .= _("Error Appending Message!")." ".sm_encode_html_special_chars($message);
 
                         if ($mailfetch_lmos == 'on') {
                             setPref($data_dir,$username,"mailfetch_uidl_$i_loop", $msglist[$i-1]);

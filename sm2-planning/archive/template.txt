@@ -1,6 +1,6 @@
-$Id$
-$Author$
-$Date$
+$Id: template.txt 4106 2002-11-06 03:15:08Z sizzlingmercury $
+$Author: sizzlingmercury $
+$Date: 2002-11-06 04:15:08 +0100 (mié 06 de nov de 2002) $
 --
 
 Document Template

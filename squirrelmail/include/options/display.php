@@ -5,9 +5,9 @@
  *
  * Displays all optinos about display preferences
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: display.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -82,14 +82,14 @@ function load_optpage_data_display() {
     $template_themes = $oTemplate->get_alternative_stylesheets(true);
     asort($template_themes);
     foreach ($template_themes as $sheet=>$name) {
-        $theme_values[$sheet] = 'Template Theme - '.htmlspecialchars($name);
+        $theme_values[$sheet] = 'Template Theme - '.sm_encode_html_special_chars($name);
     }
     // Next, list user-provided styles
     asort($user_themes);
     foreach ($user_themes as $style) {
         if ($style['PATH'] == 'none')
             continue;
-        $theme_values[$style['PATH']] = 'User Theme - '.htmlspecialchars($style['NAME']);
+        $theme_values[$style['PATH']] = 'User Theme - '.sm_encode_html_special_chars($style['NAME']);
     }
 
     if (count($user_themes) + count($template_themes) > 1) {

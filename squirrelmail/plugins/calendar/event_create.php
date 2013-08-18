@@ -3,9 +3,9 @@
 /**
  * functions to create a event for calendar.
  *
- * @copyright 2002-2012 The SquirrelMail Project Team
+ * @copyright 2002-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: event_create.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage calendar
  */
@@ -159,11 +159,11 @@ if(!isset($event_text)){
                 ) .
                 html_tag( 'tr',
                     html_tag( 'td', _("Title:"), 'right', $color[4] ) . "\n" .
-                    html_tag( 'td', htmlspecialchars($event_title,ENT_NOQUOTES), 'left', $color[4] ) . "\n"
+                    html_tag( 'td', sm_encode_html_special_chars($event_title,ENT_NOQUOTES), 'left', $color[4] ) . "\n"
                 ) .
                 html_tag( 'tr',
                     html_tag( 'td', _("Message:"), 'right', $color[4] ) . "\n" .
-                    html_tag( 'td', nl2br(htmlspecialchars($event_text,ENT_NOQUOTES)), 'left', $color[4] ) . "\n"
+                    html_tag( 'td', nl2br(sm_encode_html_special_chars($event_text,ENT_NOQUOTES)), 'left', $color[4] ) . "\n"
                 ) .
                 html_tag( 'tr',
                     html_tag( 'td',

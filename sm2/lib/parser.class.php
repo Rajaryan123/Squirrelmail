@@ -9,7 +9,7 @@
  * Also allows displaying of attachments when possible.
  *
  *
- * $Id$
+ * $Id: parser.class.php 5396 2003-07-22 21:19:38Z stekkel $
  */
 
 class Parser {

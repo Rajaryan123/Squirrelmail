@@ -10,7 +10,7 @@
 /**
  * Manage values added to and retrieved from the session.
  * 
- * $Id$
+ * $Id: input.session.php 8557 2005-01-02 07:41:14Z ebullient $
  * 
  * @package smdoc
  * @subpackage input

@@ -5,9 +5,9 @@
  *
  * This implements all functions that do general IMAP functions.
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: imap_general.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage imap
  */
@@ -109,6 +109,21 @@ function sqimap_run_command ($imap_stream, $query, $handle_errors, &$response,
         $message  = $message[$tag];
 
         if (!empty($read[$tag])) {
+            /* sqimap_read_data should be called for one response
+               but since it just calls sqimap_retrieve_imap_response
+               which handles multiple responses we need to check for
+               that and merge the $read[$tag] array IF they are
+               separated and IF it was a FETCH response. */
+
+            if (isset($read[$tag][1]) && is_array($read[$tag][1]) && isset($read[$tag][1][0])
+                && preg_match('/^\* \d+ FETCH/', $read[$tag][1][0])) {
+                $result = array();
+                foreach($read[$tag] as $index => $value) {
+                    $result = array_merge($result, $read[$tag]["$index"]);
+                }
+                return $result;
+            }
+
             return $read[$tag][0];
         } else {
             return $read[$tag];
@@ -334,7 +349,7 @@ function sqimap_read_data_list($imap_stream, $tag, $handle_errors,
           'sqimap_run_command or sqimap_run_command_list instead<br /><br />'.
           'The following query was issued:<br />'.
 //FIXME: NO HTML IN CORE!
-           htmlspecialchars($query) . '<br />' . "</font><br />\n";
+           sm_encode_html_special_chars($query) . '<br />' . "</font><br />\n";
     error_box($string);
     $oTemplate->display('footer.tpl');
     exit;
@@ -361,11 +376,11 @@ function sqimap_error_box($title, $query = '', $message_title = '', $message = '
     $cmd= strtolower($cmd[0]);
 
     if ($query != '' &&  $cmd != 'login')
-        $string .= _("Query:") . ' ' . htmlspecialchars($query) . '<br />';
+        $string .= _("Query:") . ' ' . sm_encode_html_special_chars($query) . '<br />';
     if ($message_title != '')
         $string .= $message_title;
     if ($message != '')
-        $string .= htmlspecialchars($message);
+        $string .= sm_encode_html_special_chars($message);
 //FIXME: NO HTML IN CORE!
     $string .= "</font><br />\n";
     if ($link != '')
@@ -926,7 +941,7 @@ function sqimap_login ($username, $password, $imap_server_address, $imap_port, $
 //FIXME: UUURG... We don't want HTML in error messages, should also do html sanitizing of error messages elsewhere; should't assume output is destined for an HTML browser here
             if ($response != 'NO') {
                 /* "BAD" and anything else gets reported here. */
-                $message = htmlspecialchars($message);
+                $message = sm_encode_html_special_chars($message);
                 set_up_language($squirrelmail_language, true);
                 if ($response == 'BAD') {
                     if ($hide == 3) return sprintf(_("Bad request: %s"), $message);
@@ -938,7 +953,7 @@ function sqimap_login ($username, $password, $imap_server_address, $imap_port, $
                 if (isset($read) && is_array($read)) {
                     $string .= '<br />' . _("Read data:") . "<br />\n";
                     foreach ($read as $line) {
-                        $string .= htmlspecialchars($line) . "<br />\n";
+                        $string .= sm_encode_html_special_chars($line) . "<br />\n";
                     }
                 }
                 error_box($string);

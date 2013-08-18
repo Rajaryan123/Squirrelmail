@@ -8,9 +8,9 @@
   * The following variables are available in this template:
   *    <NONE>
   *
-  * @copyright 1999-2012 The SquirrelMail Project Team
+  * @copyright 1999-2013 The SquirrelMail Project Team
   * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-  * @version $Id: table_close.tpl 12078 2007-01-07 07:28:11Z pdontthink $
+  * @version $Id: table_close.tpl 14387 2013-07-26 17:31:02Z jervfors $
   * @package squirrelmail
   * @subpackage templates
   */

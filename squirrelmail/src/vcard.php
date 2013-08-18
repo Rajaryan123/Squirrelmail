@@ -5,9 +5,9 @@
  *
  * This file shows an attched vcard
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: vcard.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  */
 
@@ -86,7 +86,7 @@ if ($vcard_nice['version'] == '2.1') {
        $vcard_nice['email;internet'] = $vcard_nice['email;pref;internet'];
     }
 } else {
-    $oTemplate->assign('note', sprintf(_("vCard Version %s is not supported. Some information might not be converted correctly."), htmlspecialchars($vcard_nice['version'])));
+    $oTemplate->assign('note', sprintf(_("vCard Version %s is not supported. Some information might not be converted correctly."), sm_encode_html_special_chars($vcard_nice['version'])));
     $oTemplate->display('note.tpl');
 
     $vcard_nice['firstname'] = '';
@@ -94,7 +94,7 @@ if ($vcard_nice['version'] == '2.1') {
 }
 
 foreach ($vcard_nice as $k => $v) {
-    $v = htmlspecialchars($v);
+    $v = sm_encode_html_special_chars($v);
     $v = trim($v);
     $vcard_safe[$k] = trim(nl2br($v));
 }

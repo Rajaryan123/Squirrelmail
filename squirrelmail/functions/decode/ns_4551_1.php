@@ -9,9 +9,9 @@
  * This is the same as ISO-646-NO and is used by some
  * Microsoft programs when sending Norwegian characters
  *
- * @copyright 2004-2012 The SquirrelMail Project Team
+ * @copyright 2004-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: ns_4551_1.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage decode
  */

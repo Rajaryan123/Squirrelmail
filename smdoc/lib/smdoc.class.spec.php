@@ -10,7 +10,7 @@
 /**
  * Class for HTML and Textile formatted documents.
  *
- * $Id$
+ * $Id: smdoc.class.spec.php 7340 2004-05-01 19:55:48Z ebullient $
  *m  
  * @package smdoc
  * @subpackage text

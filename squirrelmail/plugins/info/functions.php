@@ -10,9 +10,9 @@
  * to options.php.
  *
  * @author Jason Munro <jason at stdbev.com>
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: functions.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage info
  */
@@ -37,7 +37,7 @@ function get_caps($imap_stream) {
  * @access private
  */
 function imap_test($imap_stream, $string) {
-    print "<tr><td>".htmlspecialchars($string)."</td></tr>";
+    print "<tr><td>".sm_encode_html_special_chars($string)."</td></tr>";
     $response = sqimap_run_command_list($imap_stream, trim($string),false, $responses, $message,false);
     array_push($response, $responses . ' ' .$message);
     return $response;
@@ -55,7 +55,7 @@ function print_response($response) {
             print_response($value);
         }
         else {
-            print htmlspecialchars($value)."<br />\n";
+            print sm_encode_html_special_chars($value)."<br />\n";
         }
     }
 }

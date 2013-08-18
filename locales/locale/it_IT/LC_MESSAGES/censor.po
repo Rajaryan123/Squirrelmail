@@ -1,8 +1,8 @@
 # Italian (it_IT) censor Translation (SquirrelMail plugin)
-# Copyright (c) 2007-2012 The SquirrelMail Project Team
+# Copyright (c) 2007-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Andrea Volani <andreavola@gmail.com>, 2009.
-# $Id: censor.pot 12740 2007-10-24 21:31:21Z jervfors $
+# $Id: censor.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: censor 1.0\n"

@@ -8,9 +8,9 @@
  * This module lets the user edit his/her personal dictionary.
  *
  * @author Konstantin Riabitsev <icon at duke.edu>
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: edit_dic.mod 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage squirrelspell
  */
@@ -61,9 +61,9 @@ foreach ($langs as $lang) {
         $msg .= "</td><td valign=\"top\">\n";
       }
       $msg .= "<input type=\"checkbox\" name=\"words_ary[]\" "
-        . 'value="'.htmlspecialchars($lang_words[$j]). '" id="words_ary_'
+        . 'value="'.sm_encode_html_special_chars($lang_words[$j]). '" id="words_ary_'
         . $j . '" /> <label for="words_ary_' . $j .'">'
-        . htmlspecialchars($lang_words[$j]) . "</label><br />\n";
+        . sm_encode_html_special_chars($lang_words[$j]) . "</label><br />\n";
     }
     $msg .= '</td></tr></table></td></tr>'
       . "<tr bgcolor=\"$color[0]\" align=\"center\"><td>"

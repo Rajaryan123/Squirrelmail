@@ -10,9 +10,9 @@
  * the interface window.
  *
  * @author Konstantin Riabitsev <icon at duke.edu>
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: check_me.mod 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage squirrelspell
  */
@@ -106,7 +106,7 @@ if ($SQSPELL_SPELLCHECKER===1) {
  */
 if (!empty($check->error)) {
   $msg= '<div style="text-align: center;">'
-      . nl2br(htmlspecialchars($check->error))
+      . nl2br(sm_encode_html_special_chars($check->error))
      . '<form onsubmit="return false">'
      . '<input type="submit" value="  ' . _("Close")
      . '  " onclick="self.close()" /></form></div>';
@@ -125,7 +125,7 @@ $results = $check->check_text($sqspell_new_text);
  */
 if (!empty($check->error)) {
   $msg= '<div style="text-align: center;">'
-      . nl2br(htmlspecialchars($check->error))
+      . nl2br(sm_encode_html_special_chars($check->error))
      . '<form onsubmit="return false">'
      . '<input type="submit" value="  ' . _("Close")
      . '  " onclick="self.close()" /></form></div>';
@@ -153,7 +153,7 @@ if (is_array($results)) {
     }
 } else {
     if (!empty($check->error)) {
-        $error_msg = nl2br(htmlspecialchars($check->error));
+        $error_msg = nl2br(sm_encode_html_special_chars($check->error));
     } else {
         $error_msg = _("Unknown error");
     }

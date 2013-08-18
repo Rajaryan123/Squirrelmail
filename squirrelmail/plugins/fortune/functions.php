@@ -3,9 +3,9 @@
 /**
  * Fortune plugin functions
  *
- * @copyright 2004-2012 The SquirrelMail Project Team
+ * @copyright 2004-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: functions.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package plugins
  * @subpackage fortune
  */
@@ -50,7 +50,7 @@ function fortune_function() {
     }
 
     $oTemplate->assign('color', $color);
-    $oTemplate->assign('fortune', htmlspecialchars($fortune));
+    $oTemplate->assign('fortune', sm_encode_html_special_chars($fortune));
     $output = $oTemplate->fetch('plugins/fortune/mailbox_index_before.tpl');
     return array('mailbox_index_before' => $output);
 

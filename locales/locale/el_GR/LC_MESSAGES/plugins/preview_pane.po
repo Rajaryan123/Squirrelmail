@@ -1,8 +1,8 @@
 # Greek (el_GR) preview_pane Translation (SquirrelMail plugin)
-# Copyright (c) 1999-2012 The SquirrelMail Project Team
+# Copyright (c) 1999-2013 The SquirrelMail Project Team
 # This file is distributed under the same license as the SquirrelMail package.
 # Alexandros Vellis <avel@noc.uoa.gr>, 2004.
-# $Id: preview_pane.pot 13636 2009-05-01 21:52:36Z jervfors $
+# $Id: preview_pane.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: preview_pane 1.2\n"

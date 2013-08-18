@@ -1,8 +1,8 @@
 <?php
 /*
- *  $Id$
- *  $Author$
- *  $Date$
+ *  $Id: sq.inc 4113 2002-11-06 04:17:06Z sizzlingmercury $
+ *  $Author: sizzlingmercury $
+ *  $Date: 2002-11-06 05:17:06 +0100 (mié 06 de nov de 2002) $
  *
  *  This file is intended to help illustrate the pros and cons of
  *  using a "base" class (or plain file) that could be part of sm2.

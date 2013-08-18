@@ -1,6 +1,6 @@
 # Italian (it_IT) view_as_html plugin translation.
-# Copyright (c) 2003-2012 The SquirrelMail Project Team
-# $Id$
+# Copyright (c) 2003-2013 The SquirrelMail Project Team
+# $Id: view_as_html.po 14387 2013-07-26 17:31:02Z jervfors $
 msgid ""
 msgstr ""
 "Project-Id-Version: view_as_html.po 3.5\n"

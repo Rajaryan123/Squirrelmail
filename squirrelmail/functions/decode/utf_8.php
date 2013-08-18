@@ -35,9 +35,9 @@
  *  octdec(a-374)*64^5 + octdec(b-200)*64^4 + octdec(c-200)*64^3 +
  *  + octdec(d-200)*64^2 + octdec(e-200)*64 + octdec(f-200)
  *</pre>
- * @copyright 2003-2012 The SquirrelMail Project Team
+ * @copyright 2003-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: utf_8.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage decode
  */
@@ -60,31 +60,31 @@ function charset_decode_utf_8 ($string) {
 
     // decode six byte unicode characters
     /* (i think currently there is no such symbol)
-    $string = preg_replace("/([\374-\375])([\200-\277])([\200-\277])([\200-\277])([\200-\277])([\200-\277])/e",
-    "'&#'.((ord('\\1')-252)*1073741824+(ord('\\2')-200)*16777216+(ord('\\3')-200)*262144+(ord('\\4')-128)*4096+(ord('\\5')-128)*64+(ord('\\6')-128)).';'",
+    $string = preg_replace_callback("/([\374-\375])([\200-\277])([\200-\277])([\200-\277])([\200-\277])([\200-\277])/",
+    create_function ('$matches', 'return \'&#\'.((ord($matches[1])-252)*1073741824+(ord($matches[2])-200)*16777216+(ord($matches[3])-200)*262144+(ord($matches[4])-128)*4096+(ord($matches[5])-128)*64+(ord($matches[6])-128)).\';\';'),
     $string);
     */
 
     // decode five byte unicode characters
     /* (i think currently there is no such symbol)
-    $string = preg_replace("/([\370-\373])([\200-\277])([\200-\277])([\200-\277])([\200-\277])/e",
-    "'&#'.((ord('\\1')-248)*16777216+(ord('\\2')-200)*262144+(ord('\\3')-128)*4096+(ord('\\4')-128)*64+(ord('\\5')-128)).';'",
+    $string = preg_replace_callback("/([\370-\373])([\200-\277])([\200-\277])([\200-\277])([\200-\277])/",
+    create_function ('$matches', 'return \'&#\'.((ord($matches[1])-248)*16777216+(ord($matches[2])-200)*262144+(ord($matches[3])-128)*4096+(ord($matches[4])-128)*64+(ord($matches[5])-128)).\';\';'),
     $string);
     */
-
+    
     // decode four byte unicode characters
-    $string = preg_replace("/([\360-\367])([\200-\277])([\200-\277])([\200-\277])/e",
-    "'&#'.((ord('\\1')-240)*262144+(ord('\\2')-128)*4096+(ord('\\3')-128)*64+(ord('\\4')-128)).';'",
+    $string = preg_replace_callback("/([\360-\367])([\200-\277])([\200-\277])([\200-\277])/",
+    create_function ('$matches', 'return \'&#\'.((ord($matches[1])-240)*262144+(ord($matches[2])-128)*4096+(ord($matches[3])-128)*64+(ord($matches[4])-128)).\';\';'),
     $string);
 
     // decode three byte unicode characters
-    $string = preg_replace("/([\340-\357])([\200-\277])([\200-\277])/e",
-    "'&#'.((ord('\\1')-224)*4096+(ord('\\2')-128)*64+(ord('\\3')-128)).';'",
+    $string = preg_replace_callback("/([\340-\357])([\200-\277])([\200-\277])/",
+    create_function ('$matches', 'return \'&#\'.((ord($matches[1])-224)*4096+(ord($matches[2])-128)*64+(ord($matches[3])-128)).\';\';'),
     $string);
 
     // decode two byte unicode characters
-    $string = preg_replace("/([\300-\337])([\200-\277])/e",
-    "'&#'.((ord('\\1')-192)*64+(ord('\\2')-128)).';'",
+    $string = preg_replace_callback("/([\300-\337])([\200-\277])/",
+    create_function ('$matches', 'return \'&#\'.((ord($matches[1])-192)*64+(ord($matches[2])-128)).\';\';'),
     $string);
 
     // remove broken unicode

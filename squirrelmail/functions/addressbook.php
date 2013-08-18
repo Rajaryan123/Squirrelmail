@@ -4,9 +4,9 @@
  *
  * Functions require SM_PATH and support of forms.php functions
  *
- * @copyright 1999-2012 The SquirrelMail Project Team
+ * @copyright 1999-2013 The SquirrelMail Project Team
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version $Id$
+ * @version $Id: addressbook.php 14387 2013-07-26 17:31:02Z jervfors $
  * @package squirrelmail
  * @subpackage addressbook
  */
@@ -162,7 +162,7 @@ function addressbook_init($showerr = true, $onlylocal = false) {
      * display address book init errors.
      */
     if ($abook_init_error!='' && $showerr) {
-        error_box(nl2br(htmlspecialchars($abook_init_error)));
+        error_box(nl2br(sm_encode_html_special_chars($abook_init_error)));
     }
 
     /* Return the initialized object */
@@ -414,7 +414,7 @@ class AddressBook {
      *
      * Extra field can be used to add link to form, which allows
      * to modify all fields supported by backend. This is the only field
-     * that is not sanitized with htmlspecialchars. Backends MUST make
+     * that is not sanitized with sm_encode_html_special_chars. Backends MUST make
      * sure that field data is sanitized and displayed correctly inside
      * table cell. Use of html formating in other address book fields is
      * not allowed. Backends that don't return 'extra' row in address book

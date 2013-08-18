@@ -13,9 +13,9 @@
   *                    in double quotes as attribute values (optional;
   *                    may not be present)
   *
-  * @copyright 1999-2012 The SquirrelMail Project Team
+  * @copyright 1999-2013 The SquirrelMail Project Team
   * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-  * @version $Id$
+  * @version $Id: input.tpl 14387 2013-07-26 17:31:02Z jervfors $
   * @package squirrelmail
   * @subpackage templates
   */
@@ -28,8 +28,8 @@ extract($t);
 
 echo '<input type="' . $type . '"';
 foreach ($aAttribs as $key => $value) {
-//TODO: see the FIXME tag on line 68 of functions/forms.php - the htmlspecialchars() below should be migrated to the template class
-    echo ' ' . $key . (is_null($value) ? '' : '="' . htmlspecialchars($value) . '"');
+//TODO: see the FIXME tag on line 68 of functions/forms.php - the sm_encode_html_special_chars() below should be migrated to the template class
+    echo ' ' . $key . (is_null($value) ? '' : '="' . sm_encode_html_special_chars($value) . '"');
 }
 echo ' />';
 

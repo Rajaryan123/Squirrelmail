@@ -10,7 +10,7 @@
 /** 
  * Modified Foowd Environment object.
  * 
- * $Id$
+ * $Id: smdoc.env.foowd.php 7832 2004-08-05 19:56:50Z ebullient $
  * 
  * @package smdoc
  * @author Erin Schnabel
