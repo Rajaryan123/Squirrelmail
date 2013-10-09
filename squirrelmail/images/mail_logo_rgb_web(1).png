@@ -1,0 +1,132 @@
+<?php
+function resize($img, $w, $h, $newfilename) {
+
+ //Check if GD extension is loaded
+ if (!extension_loaded('gd') && !extension_loaded('gd2')) {
+  trigger_error("GD is not loaded", E_USER_WARNING);
+  return false;
+ }
+
+ //Get Image size info
+ $imgInfo = getimagesize($img);
+ switch ($imgInfo[2]) {
+  case 1: $im = imagecreatefromgif($img); break;
+  case 2: $im = imagecreatefromjpeg($img);  break;
+  case 3: $im = imagecreatefrompng($img); break;
+  default:  trigger_error('Unsupported filetype!', E_USER_WARNING);  break;
+ }
+
+ //If image dimension is smaller, do not resize
+ if ($imgInfo[0] <= $w && $imgInfo[1] <= $h) {
+  $nHeight = $imgInfo[1];
+  $nWidth = $imgInfo[0];
+ }else{
+                //yeah, resize it, but keep it proportional
+  if ($w/$imgInfo[0] > $h/$imgInfo[1]) {
+   $nWidth = $w;
+   $nHeight = $imgInfo[1]*($w/$imgInfo[0]);
+  }else{
+   $nWidth = $imgInfo[0]*($h/$imgInfo[1]);
+   $nHeight = $h;
+  }
+ }
+ $nWidth = round($nWidth);
+ $nHeight = round($nHeight);
+
+ $newImg = imagecreatetruecolor($nWidth, $nHeight);
+
+ /* Check if this image is PNG or GIF, then set if Transparent*/  
+ if(($imgInfo[2] == 1) OR ($imgInfo[2]==3)){
+  imagealphablending($newImg, false);
+  imagesavealpha($newImg,true);
+  $transparent = imagecolorallocatealpha($newImg, 255, 255, 255, 127);
+  imagefilledrectangle($newImg, 0, 0, $nWidth, $nHeight, $transparent);
+ }
+ imagecopyresampled($newImg, $im, 0, 0, 0, 0, $nWidth, $nHeight, $imgInfo[0], $imgInfo[1]);
+
+ //Generate the file, and rename it to $newfilename
+ switch ($imgInfo[2]) {
+  case 1: imagegif($newImg,$newfilename); break;
+  case 2: imagejpeg($newImg,$newfilename);  break;
+  case 3: imagepng($newImg,$newfilename); break;
+  default:  trigger_error('Failed resize image!', E_USER_WARNING);  break;
+ }
+
+   return $newfilename;
+}
+
+
+$img = "images/logo.png"; // File image location
+$newfilename = "images/mail_logo_rgb_web(1).png"; // New file name for thumb
+$w = 45;
+$h = 45;
+
+$thumbnail = resize($img, $w, $h, $newfilename);
+
+
+$image = @$HTTP_GET_VARS['image']; // Useful if using in an img tag to call images
+$image = str_replace(array("/", ".."), "", $image); // Prevent abuse
+$overlay = $thumbnail;
+
+$dir = '';
+
+// A default image for the demo...remove if you wish.
+if ($image == NULL) {
+    $image = 'images/mail_logo_rgb_web(1).png';
+}
+
+// Find if image exists
+if (!file_exists($dir . $image)) {
+    die("Image does not exist.");
+}
+
+// Set offset from bottom-right corner
+$w_offset = 57;
+$h_offset = 230;
+
+$extension = strtolower(substr($image, strrpos($image, ".") + 1));
+
+// Load image from file
+switch ($extension)
+{
+    case 'jpg':
+        $background = imagecreatefromjpeg($dir . $image);
+        break;
+    case 'jpeg':
+        $background = imagecreatefromjpeg($dir . $image);
+        break;
+    case 'png':
+        $background = imagecreatefrompng($dir . $image);
+        break;
+    case 'gif':
+        $background = imagecreatefromgif($dir . $image);
+        break;
+    default:
+        die("Image is of unsupported type.");
+}
+
+// Find base image size
+$swidth = imagesx($background);
+$sheight = imagesy($background);
+
+// Turn on alpha blending
+imagealphablending($background, true);
+
+// Create overlay image
+$overlay = imagecreatefrompng($dir . $overlay);
+
+// Get the size of overlay
+$owidth = imagesx($overlay);
+$oheight = imagesy($overlay);
+
+// Overlay watermark
+imagecopy($background, $overlay, $swidth - $owidth - $w_offset, $sheight - $oheight - $h_offset, 0, 0, $owidth, $oheight);
+
+// Output header and final image
+header("Content-type: image/jpeg");
+header("Content-Disposition: filename=" . $image);
+imagejpeg($background);
+
+// Destroy the images
+imagedestroy($background);
+imagedestroy($overlay);
